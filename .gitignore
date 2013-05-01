@@ -1,0 +1,4 @@
+config.private.php
+public_html/perch/addons/plugins/editors/markitup
+public_html/perch/runtime.php
+public_html/perch/index.php

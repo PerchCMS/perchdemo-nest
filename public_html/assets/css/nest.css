@@ -1,0 +1,376 @@
+/* Reset */
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+
+
+/* Global */
+body {
+	color           : rgb(30, 30, 30);
+	background-color: rgb(239, 239, 239);
+	font-family     : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight     : 300;
+	line-height		: 1.6; 
+}
+
+.wrapper {
+	margin 			: 0 0 20px 20px;
+}
+
+/* Text */
+
+a:link,
+a:visited {
+	color          : rgb(240, 88, 78);
+	text-decoration: none;
+	border-bottom  : 1px solid rgb(240, 88, 78);
+}
+
+a:hover,
+a:focus,
+a:active {
+	color          : rgb(30, 30, 30);
+	border-bottom  : 2px solid rgb(240, 88, 78);
+}
+
+h1 {
+	font-size  : 275%;
+	text-align : center;
+	font-weight: 300;
+}
+
+h2 {
+	font-weight: 300;
+	margin     : 1em 0 0.5em 0;
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	color      : rgb(0, 0, 0);
+	line-height: 1;
+}
+
+/* Nav */
+
+.navbar {
+	color                 : rgb(239, 239, 239);
+	background-color      : rgb(39, 39, 39);
+	margin                : 0;
+	padding 			  : 0 20px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.topbar {
+	margin: 0 0 20px 0;
+}
+
+.navbar li {
+	display: inline-block;
+}
+
+.navbar a:link,
+.navbar a:visited {
+	text-transform  : uppercase;
+	color           : rgb(239, 239, 239);
+	background-color: transparent;
+	text-decoration : none;
+	font-family     : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size       : 75%;
+	border-top      : 4px solid transparent;
+	padding         : 1em 0.5em;
+	display         : block;
+	border-bottom   : 0;
+}
+
+.topbar a:link,
+.topbar a:visited {
+	border-top   	: none;
+	border-bottom  	: 4px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:focus,
+.navbar a:active {
+	border-top   : 4px solid rgb(239, 239, 239);
+	border-bottom: 0;
+}
+
+.topbar a:hover,
+.topbar a:focus,
+.topbar a:active {
+	border-bottom 	: 4px solid rgb(239, 239, 239);
+	border-top 		: 0;
+}
+
+.navbar a.blog:hover {
+	border-top-color: rgb(240, 88, 78);
+}
+
+.navbar a.events:hover {
+	border-top-color: rgb(87, 149, 178);
+}
+
+.navbar a.gallery:hover {
+	border-top-color: rgb(98, 119, 227);
+}
+
+.navbar a.contact:hover {
+	border-top-color: rgb(240, 158, 78);
+}
+
+.navbar a.shop:hover {
+	border-top-color: rgb(204, 97, 135);
+}
+
+.navbar a.members:hover {
+	border-top-color: rgb(174, 190, 98);
+}
+
+.navbar a.about:hover {
+	border-top-color: rgb(98, 190, 141);
+}
+
+.topbar a.blog:hover,
+.topbar a.blog.selected {
+	border-bottom-color: rgb(240, 88, 78);
+	border-top         : 0;
+}
+
+.topbar a.events:hover,
+.topbar a.events.selected {
+	border-bottom-color: rgb(87, 149, 178);
+	border-top         : 0;
+}
+
+.topbar a.gallery:hover,
+.topbar a.gallery.selected {
+	border-bottom-color: rgb(98, 119, 227);
+	border-top         : 0;
+}
+
+.topbar a.contact:hover,
+.topbar a.contact.selected {
+	border-bottom-color: rgb(240, 158, 78);
+	border-top         : 0;
+}
+
+.topbar a.shop:hover,
+.topbar a.shop.selected {
+	border-bottom-color: rgb(204, 97, 135);
+	border-top         : 0;
+}
+
+.topbar a.members:hover,
+.topbar a.members.selected {
+	border-bottom-color: rgb(174, 190, 98);
+	border-top         : 0;
+}
+
+.topbar a.about:hover,
+.topbar a.about.selected {
+	border-bottom-color: rgb(98, 190, 141);
+	border-top         : 0;
+}
+
+.navbar .fin {
+	float: right;
+}
+
+/* Boxes */
+
+.box {
+	margin          : 0 20px 20px 0;
+	padding         : 20px;
+	border-top      : 4px solid rgb(128, 128, 128);
+	background-color: rgb(250, 250, 250);
+	box-shadow      : 0px 2px 5px rgb(213, 213, 213);
+}
+
+.box.blog {
+	border-top-color: rgb(240, 88, 78);
+}
+
+.box.events {
+	border-top-color: rgb(87, 149, 178);
+}
+
+.box.gallery {
+	border-top-color: rgb(98, 119, 227);
+}
+
+.box.contact {
+	border-top-color: rgb(240, 158, 78);
+}
+
+.box.shop {
+	border-top-color: rgb(204, 97, 135);
+}
+
+.box.members {
+	border-top-color: rgb(174, 190, 98);
+}
+
+.box.about {
+	border-top-color: rgb(98, 190, 141);
+}
+
+
+
+/* Blog */
+
+.posts li {
+	list-style: none;
+}
+
+.posts .post {
+	padding-left: 80px;
+	padding-right: 20px;
+}
+
+.posts .post-title {
+	font-size    : 150%;
+	font-weight  : 300;
+	color        : rgb(30, 30, 30);
+	font-family  : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	border-bottom: 0;
+}
+
+.posts .post-title:hover,
+.posts .post-title:focus,
+.posts .post-title:active {
+	border-bottom: 1px solid rgb(30, 30, 30);
+}
+
+.posts time {
+	float                 : left;
+	width                 : 80px;
+	text-align            : center;
+	margin-left           : -80px;
+	font-size             : 62.5%;
+	color                 : rgb(158, 158, 158);
+	text-transform        : uppercase;
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	-webkit-font-smoothing: antialiased;
+} 
+
+.posts time .day {
+	display         : block;
+	background-color: rgb(239, 239, 239);
+	padding         : 0.5em 0.3em;
+	margin          : 0 auto;
+	width           : 2em;
+	border-radius   : 2em;
+	font-size       : 120%;
+}
+
+.posts .read-more {
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size             : 75%;
+	border-bottom 		  : 0;
+
+}
+
+.posts .comments {
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size  : 75%;
+	color      : rgb(240, 88, 78);
+	width      : 80px;
+	margin-left: -80px;
+	text-align: center;
+	float: left;
+	line-height: 2.4;
+}
+
+.posts .lang-comments {
+	position: absolute;
+	left    : -99999em;
+
+}
+
+.posts .post:after {
+	width        : 110px;
+	height       : 1px;
+	border-bottom: 2px solid rgb(239, 239, 239);
+	content      : ' ';
+	display      : block;
+	margin       : 1em 0 2em -80px;
+}
+
+.posts {
+	border-bottom : 2px solid rgb(239, 239, 239);
+	margin : 0 -20px 1em -20px;
+	padding-bottom: 1em;
+}
+
+.posts .post:last-child:after {
+	display: none;
+}
+
+.posts .post img {
+	float: right;
+	border: 2px solid rgb(54, 54, 54);
+	margin-left: 10px;
+}
+
+/* Generic UI */
+
+.list-cta {
+	text-align    : right;
+}
+
+.list-cta a {
+
+	text-transform: uppercase;
+	font-family   : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	border-bottom : 0;
+	font-size 	  : 87.5%;
+}
+
+.list-cta:after {
+	content   : ".";
+	display   : block;
+	height    : 0;
+	clear     : both;
+	visibility: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
