@@ -1,0 +1,36 @@
+<perch:before>
+	<div class="box blog">
+		<ul class="posts">
+</perch:before>
+
+			<li class="post<perch:if exists="perch_item_first"> prime</perch:if>">
+                <time datetime="<perch:blog id="postDateTime" format="Y-m-d" />" pubdate="pubdate"><span class="day"><perch:blog id="postDateTime" format="d" /></span> <perch:blog id="postDateTime" format="F" /></time>
+                
+                <perch:if exists="perch_item_first">
+
+                	<h2><a href="<perch:blog id="postURL" />" rel="bookmark" class="post-title"><perch:blog id="postTitle" /></a></h2>
+                	<perch:if exists="image"><img src="<perch:blog id="image" type="image" width="500" />" 
+                		width="100%" alt="<perch:blog id="postTitle" escape="true" />" /></perch:if>
+
+
+                <perch:else />
+                	<h2><a href="<perch:blog id="postURL" />" rel="bookmark" class="post-title"><perch:blog id="postTitle" /></a></h2>
+                	<perch:if exists="image"><img src="<perch:blog id="image" type="image" width="140" height="140" crop="true" density="2" />" 
+                		width="<perch:blog id="image" type="image" width="140" height="140" crop="true" density="2" output="w" />" 
+                		height="<perch:blog id="image" type="image" width="140" height="140" crop="true" density="2" output="h" />" 
+                		alt="<perch:blog id="postTitle" escape="true" />" /></perch:if>
+
+
+
+                </perch:if>
+
+
+                <perch:blog id="excerpt" type="textarea" textile="true" />
+                <p class="comments icon"><perch:blog id="postCommentCount"/> <span class="lang-comments">comments</span></p>
+                <p><a href="<perch:blog id="postURL" />" class="read-more">Read More &raquo;</a></p>
+            </li>
+
+<perch:after>
+		</ul>
+	</div>
+</perch:after>

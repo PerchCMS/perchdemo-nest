@@ -1,0 +1,15 @@
+<perch:before>
+	<div class="box events upcoming">
+		<h2 class="icon">Upcoming events</h2>
+		<ul>
+</perch:before>
+			<li class="event">
+				<time datetime="<perch:events id="eventDateTime" format="Y-m-d" type="date" />" class="icon"><span class="day"><perch:events id="eventDateTime" format="d" type="date" /></span> <perch:events id="eventDateTime" format="F" type="date" /></time>
+				<a href="/events/<perch:events id="eventSlug" />/"><perch:events id="eventTitle" /></a>
+			</li>
+<perch:after>
+		</ul>
+		<a href="/events/rss/" class="rss icon"><span class="lang-rss">Subscribe to events RSS feed</span></a>
+		<div class="list-cta"><a href="/events/">View all events &rarr;</a></div>
+	</div>
+</perch:after>

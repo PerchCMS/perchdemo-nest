@@ -1,0 +1,19 @@
+<perch:before>
+<div class="gallery minor box">
+	<h2><perch:gallery id="albumTitle" /></h2>
+	<time datetime="<perch:gallery id="date" type="date" format="Y-m-d" />" pubdate="pubdate"><span class="day"><perch:gallery id="date" type="date" format="dS" /></span> <perch:gallery id="date" type="date" format="F" /></time>
+	<perch:gallery id="description" type="textarea" textile="true" />
+</div>
+
+
+<ul class="album-images">
+</perch:before>
+
+<li class="boxer">
+	<a href="<perch:gallery id="main" />"><img src="<perch:gallery id="square" />" alt="<perch:gallery id="imageAlt" />" width="100%" /></a>
+</li>
+
+
+<perch:after>
+</ul>
+</perch:after>

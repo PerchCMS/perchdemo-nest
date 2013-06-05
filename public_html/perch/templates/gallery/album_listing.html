@@ -1,0 +1,15 @@
+<div class="album boxer<perch:if exists="featured"> featured</perch:if>">
+	<a href="/gallery/?album=<perch:gallery id="albumSlug" />">
+		<perch:if exists="featured">
+			<img src="<perch:gallery id="feature" />" width="100%" />
+		<perch:else />
+			<img src="<perch:gallery id="square" />" width="100%" />
+		</perch:if>
+		<span class="image-count"><perch:gallery id="imageCount" /> <span class="lang-photos">photos in this album</span></span>
+	</a>
+	<div class="box gallery minor boxed">
+		<h2><a href="/gallery/?album=<perch:gallery id="albumSlug" />"><perch:gallery id="albumTitle" /></a></h2>
+		<time datetime="<perch:gallery id="date" type="date" format="Y-m-d" />" pubdate="pubdate"><span class="day"><perch:gallery id="date" type="date" format="jS" /></span> <perch:gallery id="date" type="date" format="F Y" /></time>
+		<perch:gallery id="description" type="textarea" textile="true" />
+	</div>
+</div>

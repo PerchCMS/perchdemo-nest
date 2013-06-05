@@ -22,12 +22,17 @@ body {
 	background-color: rgb(239, 239, 239);
 	font-family     : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-weight     : 300;
-	line-height		: 1.6; 
+	line-height     : 1.6; 
 }
 
 .wrapper {
-	margin 			: 0 0 20px 20px;
+	margin: 0 0 20px 20px;
 }
+
+.icon {
+	background: url('/assets/img/sprite.png') no-repeat 0 0;	
+}
+
 
 /* Text */
 
@@ -41,8 +46,8 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color          : rgb(30, 30, 30);
-	border-bottom  : 2px solid rgb(240, 88, 78);
+	color        : rgb(30, 30, 30);
+	border-bottom: 2px solid rgb(240, 88, 78);
 }
 
 h1 {
@@ -57,6 +62,98 @@ h2 {
 	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	color      : rgb(0, 0, 0);
 	line-height: 1;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+.minor h2 {
+	text-transform: uppercase;
+	font-family   : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size     : 87.5%;
+	margin        : 0.5em 0;
+}
+
+.minor p {
+	font-size: 87.5%;
+}
+
+.minor.blog h2,
+.minor.blog h2 a:link,
+.minor.blog h2 a:visited {
+	color: rgb(240, 88, 78);
+	border: 0;
+}
+
+.minor.events h2,
+.minor.events h2 a:link,
+.minor.events h2 a:visited {
+	color : rgb(87, 149, 178);
+	border: 0;
+}
+
+.minor.gallery h2,
+.minor.gallery h2 a:link,
+.minor.gallery h2 a:visited {
+	color : rgb(98, 119, 227);
+	border: 0;
+}
+
+.minor.contact h2,
+.minor.contact h2 a:link,
+.minor.contact h2 a:visited {
+	color : rgb(240, 158, 78);
+	border: 0;
+}
+
+.minor.shop h2,
+.minor.shop h2 a:link,
+.minor.shop h2 a:visited {
+	color : rgb(204, 97, 135);
+	border: 0;
+}
+
+.minor.members h2,
+.minor.members h2 a:link,
+.minor.members h2 a:visited {
+	color : rgb(174, 190, 98);
+	border: 0;
+}
+
+.minor.about h2,
+.minor.about h2 a:link,
+.minor.about h2 a:visited {
+	color : rgb(98, 190, 141);
+	border: 0;
+}
+
+/* I fail at specificity */
+.minor h2 a:hover,
+.minor h2 a:focus,
+.minor h2 a:active,
+.minor.blog h2 a:hover,
+.minor.blog h2 a:focus,
+.minor.blog h2 a:active,
+.minor.events h2 a:hover,
+.minor.events h2 a:focus,
+.minor.events h2 a:active,
+.minor.gallery h2 a:hover,
+.minor.gallery h2 a:focus,
+.minor.gallery h2 a:active,
+.minor.contact h2 a:hover,
+.minor.contact h2 a:focus,
+.minor.contact h2 a:active,
+.minor.shop h2 a:hover,
+.minor.shop h2 a:focus,
+.minor.shop h2 a:active,
+.minor.members h2 a:hover,
+.minor.members h2 a:focus,
+.minor.members h2 a:active,
+.minor.about h2 a:hover,
+.minor.about h2 a:focus,
+.minor.about h2 a:active  {
+	color: rgb(0, 0, 0);
 }
 
 /* Nav */
@@ -77,6 +174,19 @@ h2 {
 	display: inline-block;
 }
 
+.topbar .home {
+	float: left;
+	background-position: 0px -681px;
+	width: 39px;
+	height: 40px;
+	margin: 0 0 0 10px;
+}
+
+.topbar .lang-home {
+	position: absolute;
+	left: -9999em;
+}
+
 .navbar a:link,
 .navbar a:visited {
 	text-transform  : uppercase;
@@ -93,8 +203,8 @@ h2 {
 
 .topbar a:link,
 .topbar a:visited {
-	border-top   	: none;
-	border-bottom  	: 4px solid transparent;
+	border-top   : none;
+	border-bottom: 4px solid transparent;
 }
 
 .navbar a:hover,
@@ -107,8 +217,8 @@ h2 {
 .topbar a:hover,
 .topbar a:focus,
 .topbar a:active {
-	border-bottom 	: 4px solid rgb(239, 239, 239);
-	border-top 		: 0;
+	border-bottom: 4px solid rgb(239, 239, 239);
+	border-top   : 0;
 }
 
 .navbar a.blog:hover {
@@ -193,6 +303,31 @@ h2 {
 	border-top      : 4px solid rgb(128, 128, 128);
 	background-color: rgb(250, 250, 250);
 	box-shadow      : 0px 2px 5px rgb(213, 213, 213);
+	position 		: relative;
+}
+
+.box.boxed {
+	margin    : 0;
+	box-shadow: none;
+}
+
+.boxer {
+	margin    : 0 20px 20px 0;
+	box-shadow: 0px 2px 5px rgb(213, 213, 213);
+}
+
+.boxer > a {
+	position: relative;
+	display : block;
+	border  : 0;
+}
+
+.boxed:after {
+	content   : ".";
+	display   : block;
+	height    : 0;
+	clear     : both;
+	visibility: hidden;
 }
 
 .box.blog {
@@ -223,6 +358,10 @@ h2 {
 	border-top-color: rgb(98, 190, 141);
 }
 
+.boxer img {
+	display  : block;
+	max-width: 100%;
+}
 
 
 /* Blog */
@@ -232,11 +371,14 @@ h2 {
 }
 
 .posts .post {
-	padding-left: 80px;
+	padding-left : 80px;
 	padding-right: 20px;
 }
 
-.posts .post-title {
+
+.post-title,
+.post-title:link,
+.post-title:visited {
 	font-size    : 150%;
 	font-weight  : 300;
 	color        : rgb(30, 30, 30);
@@ -244,11 +386,20 @@ h2 {
 	border-bottom: 0;
 }
 
-.posts .post-title:hover,
-.posts .post-title:focus,
-.posts .post-title:active {
+.prime .post-title {
+	font-size    : 275%;
+	margin-bottom: 0.5em;
+	display      : inline-block;
+	border-bottom: 1px solid transparent;
+}
+
+.post-title:hover,
+.post-title:focus,
+.post-title:active {
 	border-bottom: 1px solid rgb(30, 30, 30);
 }
+
+
 
 .posts time {
 	float                 : left;
@@ -272,22 +423,19 @@ h2 {
 	font-size       : 120%;
 }
 
-.posts .read-more {
-	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-size             : 75%;
-	border-bottom 		  : 0;
 
-}
 
 .posts .comments {
-	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-	font-size  : 75%;
-	color      : rgb(240, 88, 78);
-	width      : 80px;
-	margin-left: -80px;
-	text-align: center;
-	float: left;
-	line-height: 2.4;
+	font-family        : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size          : 75%;
+	color              : rgb(240, 88, 78);
+	width              : 35px;
+	margin-left        : -80px;
+	text-align         : left;
+	float              : left;
+	margin-top         : -1em;
+	padding-left       : 45px;
+	background-position: 25px -32px;
 }
 
 .posts .lang-comments {
@@ -307,7 +455,7 @@ h2 {
 
 .posts {
 	border-bottom : 2px solid rgb(239, 239, 239);
-	margin : 0 -20px 1em -20px;
+	margin        : 0 -20px 1em -20px;
 	padding-bottom: 1em;
 }
 
@@ -316,24 +464,146 @@ h2 {
 }
 
 .posts .post img {
-	float: right;
-	border: 2px solid rgb(54, 54, 54);
+	float      : right;
+	border     : 2px solid rgb(54, 54, 54);
 	margin-left: 10px;
 }
 
+.posts .prime img {
+	float: none;
+	margin-left: 0;
+}
+
+
+/* Forms */
+
+form {
+
+}
+
+input {
+	font-size         : 100%;
+	width             : 320px;
+	max-width         : 100%;
+	-moz-box-sizing   : border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing        : border-box;
+}
+
+label {
+	font-size: 87.5%;
+	display  : block;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+	background-color: rgb(239, 239, 239);
+	border          : 0;
+	box-shadow      : inset 0px 2px 6px rgb(217, 217, 217);
+	padding         : 0.5em;
+	font-size       : 87.5%;
+	color           : rgb(54, 54, 54);
+	margin-bottom   : 1em;
+}
+
+textarea {
+	width             : 100%;
+	-moz-box-sizing   : border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing        : border-box;
+}
+
+
+
 /* Generic UI */
+
+.read-more,
+.read-more:link,
+.read-more:visited {
+	font-family  : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size    : 75%;
+	border-bottom: 0;
+	margin-top   : -1em;
+	display      : block;
+	clear 		 : right;
+}
+
+.blog .read-more {
+	color: rgb(240, 88, 78);
+}
+
+.events .read-more {
+	color: rgb(87, 149, 178);
+}
+
+.gallery .read-more {
+	color: rgb(98, 119, 227);
+}
+
+.contact .read-more {
+	color: rgb(240, 158, 78);
+}
+
+.shop .read-more {
+	color: rgb(204, 97, 135);
+}
+
+.members .read-more {
+	color: rgb(174, 190, 98);
+}
+
+.about .read-more {
+	color: rgb(98, 190, 141);
+}
 
 .list-cta {
 	text-align    : right;
 }
 
-.list-cta a {
-
+.list-cta a:link,
+.list-cta a:visited {
 	text-transform: uppercase;
 	font-family   : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	border-bottom : 0;
 	font-size 	  : 87.5%;
 }
+
+.blog .list-cta a:link,
+.blog .list-cta a:visited {
+	color: rgb(240, 88, 78);
+}
+
+.events .list-cta a:link,
+.events .list-cta a:visited {
+	color: rgb(87, 149, 178);
+}
+
+.gallery .list-cta a:link,
+.gallery .list-cta a:visited {
+	color: rgb(98, 119, 227);
+}
+
+.contact .list-cta a:link,
+.contact .list-cta a:visited {
+	color: rgb(240, 158, 78);
+}
+
+.shop .list-cta a:link,
+.shop .list-cta a:visited {
+	color: rgb(204, 97, 135);
+}
+
+.members .list-cta a:link,
+.members .list-cta a:visited {
+	color: rgb(174, 190, 98);
+}
+
+.about .list-cta a:link,
+.about .list-cta a:visited {
+	color: rgb(98, 190, 141);
+}
+
 
 .list-cta:after {
 	content   : ".";
@@ -343,34 +613,315 @@ h2 {
 	visibility: hidden;
 }
 
+.button,
+.button:link,
+.button:visited,
+input.button {
+	text-transform        : uppercase;
+	color                 : rgb(255, 255, 255);
+	padding               : 1em 2em;
+	border-radius         : 2em;
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	border                : 0;
+	display               : inline-block;
+	-webkit-font-smoothing: antialiased;
+	font-size 	  		  : 87.5%;
+	cursor 				  : pointer;
+}
 
 
+.blog .button {
+	background-color: rgb(240, 88, 78);
+}
+
+.events .button {
+	background-color: rgb(87, 149, 178);
+}
+
+.gallery .button {
+	background-color: rgb(98, 119, 227);
+}
+
+.contact .button {
+	background-color: rgb(240, 158, 78);
+}
+
+.shop .button {
+	background-color: rgb(204, 97, 135);
+}
+
+.members .button {
+	background-color: rgb(174, 190, 98);
+}
+
+.about .button {
+	background-color: rgb(98, 190, 141);
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+	background-color: rgb(0, 0, 0);
+}
 
 
+/* Social links */
+
+.social .twitter,
+.social .facebook {
+	display            : block;
+	padding            : 5px 0 15px 40px;
+	text-transform     : uppercase;
+	font-size          : 87.5%;
+	font-family        : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	border-bottom      : none;
+	color              : rgb(44, 170, 225);
+	background-position: 0 -828px;
+}
+
+.social .facebook {
+	color: rgb(59, 89, 152);
+	background-position: 0 -288px;
+}
+
+.social li {
+	list-style: none;
+}
 
 
+/* Shop */
+
+.product .buy {
+	border-radius   : 2em;
+	background-color: rgb(239, 239, 239);
+	padding-left    : 0.4em;
+	display         : inline-block;
+	float           : right;
+}
+
+.product .price {
+	color                 : rgb(204, 97, 135);
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size             : 87.5%;
+	-webkit-font-smoothing: antialiased;
+	padding               : 0 1em;
+}
+
+.product .buy .button {
+	padding: 0.4em 1.5em;
+}
+
+/* Gallery */
+
+.gallery time {
+	font-size     : 62.5%;
+	color         : rgb(158, 158, 158);
+	text-transform: uppercase;
+	font-family   : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	margin        : -0.5em 0 1em 0;
+	display       : block;
+}
+
+.gallery time .day {
+	text-transform: none;
+}
+
+.album {
+	position: relative;
+}
+
+.album .image-count,
+.album .gallery-cta {
+	position              : absolute;
+	bottom                : 10px;
+	right                 : 20px;
+	font-size             : 75.0%;
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	color                 : rgb(255, 255, 255);
+	background-color      : rgba(0, 0, 0, 0.4);
+	border                : 2px solid rgba(255, 255, 255, 0.4);
+	padding               : 0.5em 2em;
+	border-radius         : 2em;
+	-webkit-font-smoothing: antialiased;
+	text-transform 		  : uppercase;
+}
+
+.album .image-count .lang-photos {
+	position: absolute;
+	left    : -99999em;
+}
+
+.album-images {
+	list-style: none;
+}
 
 
+/* Events */
+
+.event {
+	padding-left: 100px;
+}
+
+.event time {
+	float                 : left;
+	margin-left           : -100px;
+	width                 : 100px;
+	text-align            : center;
+	font-size             : 87.5%;
+	text-transform        : uppercase;
+	font-family           : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	color                 : rgb(158, 158 ,158);
+	-webkit-font-smoothing: antialiased;
+	margin-top            : 1em;
+	background-position   : 22px -108px;
+}
+
+.event time .day {
+	font-size: 142.9%;
+	display  : block;
+	color    : rgb(147, 147 ,147);
+	padding  : 18px 0 7px 0;
+}
+
+.upcoming h2 {
+	text-transform     : uppercase;
+	font-family        : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size          : 87.5%;
+	margin             : 0.5em 0 15px 0;
+	color              : rgb(87, 149, 178);
+	border             : 0;
+	text-align         : center;
+	padding            : 40px 0 10px 0;
+	background-position: 50% -216px;
+}
+
+.upcoming li {
+	list-style: none;
+}
+
+.upcoming .event {
+	padding   : 40px 20px 40px 100px;
+	border-top: 2px solid rgb(239, 239, 239);
+	margin    : 0 -20px;
+}
+
+.upcoming .event:last-child {
+	border-bottom: 2px solid rgb(239, 239, 239);
+	margin-bottom: 20px;
+}
+
+.upcoming time {
+	margin-top : -20px;
+	padding-top: 0;
+}
+
+.upcoming time .day {
+	padding: 18px 0 7px 0;
+}
+
+.upcoming a:link,
+.upcoming a:visited {
+	border: 0;
+	color : rgb(30, 30, 30);
+}
+
+.upcoming a:hover,
+.upcoming a:focus,
+.upcoming a:active {
+	border-bottom: 1px solid rgb(30, 30, 30);
+}
+
+.upcoming .rss {
+	position           : absolute;
+	bottom             : 15px;
+	left               : 22px;
+	background-position: 0 -756px;
+	width              : 32px;
+	height             : 32px;
+}
+
+.upcoming .lang-rss {
+	position: absolute;
+	left    : -99999em;
+}
+
+.events.rss .rss {
+	display            : block;
+	background-position: 0 -756px;
+	min-height         : 32px;
+	text-decoration    : none;
+	border             : 0;
+	padding-left       : 56px;
+	padding-top        : 0.3em;
+	text-transform     : uppercase;
+	font-weight        : bold;
+	font-size          : 87.5%;
+	color              : rgb(87, 149, 178);
+}
 
 
+/* Home page banner */
+
+.banner {
+	margin    : 0 0 0 -20px;
+	position  : relative;
+	top       : -21px;
+	max-height: 300px;
+}
+
+.banner img {
+	display   : block;
+	width     : 100%;	
+	max-height: 300px;
+	min-height: 260px;
+}
+
+.banner .logo {
+	background-position: 50% -468px;
+	width              : 100%;
+	height             : 154px;
+	position           : absolute;
+	left               : 0;
+	right              : 0;
+	top                : 20px;
+	margin             : 0 auto;
+}
+
+.banner .strap {
+	background-image   : url(/assets/img/strapline.png);
+	background-position: 50% 0;
+	background-repeat  : no-repeat;
+	background-size    : 100%;
+	width              : 90%;
+	max-width          : 523px;
+	height             : 50px;
+	max-height         : 50px;
+	position           : absolute;
+	left               : 0;
+	right              : 0;
+	top                : 200px;
+	margin             : 0 auto;
+}
 
 
+.carousel-nav {
+	display: none;
+}
 
 
+.embedded {
+	float: right;
+	margin: 0 0 1em 1em;
+	border: 2px solid #404040;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.offscreen {
+	position: absolute;
+	left    : -99999em;
+	top     : auto;
+	width   : 1px;
+	height  : 1px;
+	overflow: hidden;
+}
 
 

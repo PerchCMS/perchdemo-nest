@@ -1,26 +1,56 @@
-<!DOCTYPE html>
+<?php
+	
+	perch_content_create('Site name', array(
+		'template'   =>'home/site_name.html',
+		'shared'     =>true,
+		'multiple'   =>false,
+		'edit-mode'  =>'singlepage',
+		'searchable' =>false,
+		));
+
+	$meta = perch_content_custom('Site name', array(
+			'skip-template'=>true,
+			));
+	if (is_array($meta) && isset($meta[0])) {
+		$meta = $meta[0];
+	}else{
+		$meta['site_name'] = 'Nest';
+		$meta['strapline'] = 'Run for your life';
+	}
+
+	PerchSystem::set_vars($meta);
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title><?php perch_layout_var('title'); ?></title>
+	<title><?php perch_layout_var('title') ?> - <?php echo $meta['site_name']; ?> </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="/assets/css/nest.css" />
+	<link href="/assets/css/responsive-carousel.css" rel="stylesheet" />
+	<link href="/assets/css/responsive-carousel.fade.css" rel="stylesheet" />
+	<link href="/assets/css/magnific-popup.css" rel="stylesheet" />
+	<?php
+		if (perch_layout_var('rss', true)) {
+			echo '<link rel="alternate" type="application/rss+xml" title="RSS" href="'.perch_layout_var('rss', true).'" />';
+		}
+	?>
+	
 </head>
 <body>
 	<div class="navbar topbar">
 		<nav>
-
+			<a href="/" class="home icon"><span class="lang-home">Home</span></a>
 			<ul class="fin">
 				<li><a class="members" href="/members/">Member login</a></li>
 			</ul>
-
-			<ul>
-				<li><a class="about" href="/about/">About</a></li>
-				<li><a class="events" href="/events/">Events</a></li>
-				<li><a class="gallery" href="/gallery/">Gallery</a></li>
-				<li><a class="blog selected" href="/blog/">Blog</a></li>
-				<li><a class="contact" href="/contact/">Contact</a></li>
-				<li><a class="shop" href="/shop/">Shop</a></li>
-			</ul>
-
+			<?php
+				perch_pages_navigation(array(
+					'levels'=>'1',
+					));
+			?>
 		</nav>
 	</div>
+
+	<div class="wrapper">

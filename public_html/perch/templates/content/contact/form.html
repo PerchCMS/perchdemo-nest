@@ -1,0 +1,35 @@
+<perch:form id="contact" method="post" app="perch_forms" class="box contact">
+	
+	<h2><perch:content id="heading" type="text" label="Heading" default="Send us a message" required="true" /></h2>
+
+	<perch:content id="intro" type="textarea" label="Intro" textile="true" editor="markitup" size="m" />
+
+	<div>
+		<perch:label for="name">Your name:</perch:label>
+		<perch:input type="text" id="name" required="true" label="Name" />
+		<perch:error for="name" type="required">Please enter your name</perch:error>
+	</div>
+
+	<div>
+		<perch:label for="email">Email address:</perch:label>
+		<perch:input type="email" id="email" required="true" label="Email" placeholder="you@example.com" />
+		<perch:error for="email" type="required">Please add your email address</perch:error>
+		<perch:error for="email" type="format">Please check your email address</perch:error>
+	</div>
+
+	<div>
+		<perch:label for="message">Comment:</perch:label>
+		<perch:input type="textarea" id="message" required="true" label="Message" />
+		<perch:error for="message" type="required">Please add a message</perch:error>
+	</div>
+
+	<div>
+		<perch:input type="submit" id="submit" value="Send message" class="button" />
+	</div>
+
+	<perch:success>
+		<div class="box contact">
+			<perch:content id="success" type="textarea" label="Thank you message" textile="true" editor="markitup" required="true" />
+		</div>
+	</perch:success>
+</perch:form>

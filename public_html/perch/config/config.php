@@ -12,5 +12,7 @@
     define('PERCH_RESPATH', PERCH_LOGINPATH . '/resources');
     
     define('PERCH_HTML5', true);
+
+    define('PERCH_DEBUG', true);
   
 ?>

@@ -1,0 +1,15 @@
+<div class="hentry">
+	<h1><a href="<perch:blog id="postURL" />" rel="bookmark" class="entry-title"><perch:blog id="postTitle" type="text" required="true" size="xl" /></a></h1>
+	<p class="entry-published date"><perch:blog id="postDateTime" format="%d %B %Y" /> 
+		<perch:if exists="authorGivenName">by <perch:blog id="authorGivenName" /> <perch:blog id="authorFamilyName" /></perch:if>
+	</p>
+    <perch:if exists="image">
+        <div><img src="<perch:blog id="image" type="image" width="500" label="Image" />" alt="<perch:blog id="postTitle" />" /></div>
+    </perch:if>
+    <div class="description entry-content">
+    	<perch:blog id="postDescHTML" type="textarea" encode="false" editor="markitup" textile="true" size="xxl" required="true" />
+    </div>
+</div>
+
+<perch:blog id="excerpt" type="textarea" label="Excerpt" textile="true" order="1" suppress="true" size="s autowidth" />
+<perch:blog id="image" type="image" width="140" height="140" crop="true" suppress="true" density="2" />

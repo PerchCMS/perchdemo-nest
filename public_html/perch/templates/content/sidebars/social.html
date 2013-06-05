@@ -1,0 +1,8 @@
+	<div class="social">
+		<ul>
+			<perch:if exists="twitter">
+			<li><a class="twitter icon" href="https://twitter.com/<perch:content id="twitter" type="text" replace="@| ," label="Twitter username" />">Follow us on Twitter</a></li></perch:if>
+			<perch:if exists="facebook">
+			<li><a class="facebook icon" href="https://facebook.com/<perch:content id="facebook" type="text" label="Facebook username" />">Befriend us on Facebook</a></li></perch:if>
+		</ul>
+	</div>

@@ -1,21 +1,22 @@
+	</div>
 	<div class="navbar">
 		<nav>
-
 			<ul class="fin">
 				<li><a class="members" href="/members/">Member login</a></li>
 			</ul>
 
-			<ul>
-				<li><a class="about" href="/about/">About</a></li>
-				<li><a class="events" href="/events/">Events</a></li>
-				<li><a class="gallery" href="/gallery/">Gallery</a></li>
-				<li><a class="blog selected" href="/blog/">Blog</a></li>
-				<li><a class="contact" href="/contact/">Contact</a></li>
-				<li><a class="shop" href="/shop/">Shop</a></li>
-			</ul>
-
+			<?php
+				perch_pages_navigation(array(
+					'levels'=>'1',
+					));
+			?>
 		</nav>
 	</div>
+	<script src="/assets/js/jquery.js" type="text/javascript"></script>
+	<script src="/assets/js/responsive-carousel.min.js" type="text/javascript"></script>
+	<script src="/assets/js/responsive-carousel.autoplay.js" type="text/javascript"></script>
+	<script src="/assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+	<script src="/assets/js/nest.js" type="text/javascript"></script>
 	<?php 
 		PerchUtil::output_debug(); 
 	?>
