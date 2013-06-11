@@ -13,9 +13,13 @@
 		</nav>
 	</div>
 	<script src="/assets/js/jquery.js" type="text/javascript"></script>
-	<script src="/assets/js/responsive-carousel.min.js" type="text/javascript"></script>
-	<script src="/assets/js/responsive-carousel.autoplay.js" type="text/javascript"></script>
-	<script src="/assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+	<?php 
+		if (perch_layout_var('carousel', true)) {
+			echo ' 	<script src="/assets/js/responsive-carousel.min.js" type="text/javascript"></script>
+					<script src="/assets/js/responsive-carousel.autoplay.js" type="text/javascript"></script>
+					<script src="/assets/js/jquery.magnific-popup.min.js" type="text/javascript"></script>';
+		};
+	?>
 	<script src="/assets/js/nest.js" type="text/javascript"></script>
 	<?php 
 		PerchUtil::output_debug(); 

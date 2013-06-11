@@ -31,10 +31,13 @@
 	<title><?php perch_layout_var('title') ?> - <?php echo $meta['site_name']; ?> </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="/assets/css/nest.css" />
-	<link href="/assets/css/responsive-carousel.css" rel="stylesheet" />
-	<link href="/assets/css/responsive-carousel.fade.css" rel="stylesheet" />
-	<link href="/assets/css/magnific-popup.css" rel="stylesheet" />
 	<?php
+		if (perch_layout_var('carousel', true)) {
+			echo '	<link href="/assets/css/responsive-carousel.css" rel="stylesheet" />
+					<link href="/assets/css/responsive-carousel.fade.css" rel="stylesheet" />
+					<link href="/assets/css/magnific-popup.css" rel="stylesheet" />';
+		}
+
 		if (perch_layout_var('rss', true)) {
 			echo '<link rel="alternate" type="application/rss+xml" title="RSS" href="'.perch_layout_var('rss', true).'" />';
 		}

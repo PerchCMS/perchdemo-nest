@@ -8,3 +8,5 @@ public_html/perch/runtime.php
 public_html/perch/index.php
 public_html/perch/resources/
 default_content
+members_files/*
+!members_files/README.md

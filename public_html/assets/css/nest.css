@@ -879,6 +879,16 @@ input.button {
 }
 
 
+/* Members */
+
+.file {
+	clear: right;
+}
+
+.file .button {
+	float: right;
+}
+
 /* Home page banner */
 
 .banner {
