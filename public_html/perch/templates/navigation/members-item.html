@@ -1,0 +1,6 @@
+<perch:before>
+    <ul class="fin">
+</perch:before>	<li<perch:if exists="ancestor_page"> class="ancestor"</perch:if>><a class="<perch:pages id="pagePath" urlify="true" /><perch:if exists="current_page"> selected</perch:if>" href="<perch:pages id="pagePath" />"><perch:pages id="pageNavText" /></a><perch:pages id="subitems" encode="false" /></li>
+<perch:after>
+    </ul>
+</perch:after>

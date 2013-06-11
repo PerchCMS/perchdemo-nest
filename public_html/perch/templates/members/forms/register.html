@@ -1,0 +1,56 @@
+
+<perch:form id="register" method="post" app="perch_members" type="default" class="box members">
+
+	<h2>Tell us about yourself</h2>
+
+	<div>
+		<perch:label for="first_name">First name</perch:label>
+		<perch:input type="text" id="first_name" required="true" label="First name" />
+		<perch:error for="first_name" type="required">Please add your name</perch:error>
+	</div>
+
+	<div>
+		<perch:label for="last_name">Last name</perch:label>
+		<perch:input type="text" id="last_name" required="true" label="Last name" />
+		<perch:error for="last_name" type="required">Please add your name</perch:error>
+	</div>
+
+	<div>
+		<perch:label for="membership_no">Club membership number (8-12 numbers)</perch:label>
+		<perch:input type="text" pattern="[0-9]{8,12}" id="membership_no" required="true" label="Membership #" />
+		<perch:error for="membership_no" type="required">Please add your club membership number</perch:error>
+	</div>
+
+	<div>
+		<perch:label for="email">Email</perch:label>
+		<perch:input type="email" id="email" required="true" placeholder="you@company.com" helper="PerchMembers_Members::check_email" />
+		<perch:error for="email" type="required">Please add your email address</perch:error>
+		<perch:error for="email" type="helper">That email address is already in use</perch:error>
+	</div>
+
+	<div>
+		<perch:label for="password">Choose a password</perch:label>
+		<perch:input type="password" id="password" required="true" match-with="password2" />
+		<perch:error for="password" type="required">Please add a password</perch:error>
+		<perch:error for="password" type="match">Your two passwords do not match - try again</perch:error>
+	</div>
+
+	<div>
+		<perch:label for="password2">Type the same password again</perch:label>
+		<perch:input type="password" id="password2" required="true" />
+		<perch:error for="password2" type="required">Please repeat your password</perch:error>
+	</div>
+
+
+	<div>
+		<perch:input type="submit" value="Register" class="button" />
+	</div>
+
+	<perch:success>
+		<div class="box">
+			<h2>Thank you</h2>
+			<p>An administrator will revue your details, and you'll get an email once your access is approved.</p>
+		</div>
+	</perch:success>
+
+</perch:form>

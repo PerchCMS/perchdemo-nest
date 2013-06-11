@@ -33,6 +33,10 @@ body {
 	background: url('/assets/img/sprite.png') no-repeat 0 0;	
 }
 
+small {
+	font-size: 80%;
+}
+
 
 /* Text */
 
@@ -280,7 +284,9 @@ p {
 }
 
 .topbar a.members:hover,
-.topbar a.members.selected {
+.topbar a.members.selected,
+.topbar a.logout:hover,
+.topbar a.logout.selected {
 	border-bottom-color: rgb(174, 190, 98);
 	border-top         : 0;
 }
@@ -330,30 +336,37 @@ p {
 	visibility: hidden;
 }
 
+.blog .box,
 .box.blog {
 	border-top-color: rgb(240, 88, 78);
 }
 
+.events .box,
 .box.events {
 	border-top-color: rgb(87, 149, 178);
 }
 
+.gallery .box,
 .box.gallery {
 	border-top-color: rgb(98, 119, 227);
 }
 
+.contact .box,
 .box.contact {
 	border-top-color: rgb(240, 158, 78);
 }
 
+.shop .box,
 .box.shop {
 	border-top-color: rgb(204, 97, 135);
 }
 
+.members .box,
 .box.members {
 	border-top-color: rgb(174, 190, 98);
 }
 
+.about .box,
 .box.about {
 	border-top-color: rgb(98, 190, 141);
 }
@@ -497,6 +510,7 @@ label {
 
 input[type=text],
 input[type=email],
+input[type=password],
 textarea {
 	background-color: rgb(239, 239, 239);
 	border          : 0;
@@ -709,6 +723,11 @@ input.button {
 
 .product .buy .button {
 	padding: 0.4em 1.5em;
+}
+
+
+.product .buy .button:hover:before {
+	content: "Demo only - ";
 }
 
 /* Gallery */

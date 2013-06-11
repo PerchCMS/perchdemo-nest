@@ -1,0 +1,29 @@
+<perch:form id="login" method="post" app="perch_members" class="box members minor">
+	<fieldset>
+	   	<h2>Log in</h2>
+
+		<perch:error for="all" type="login">
+			<p class="error">Those details do not match our records.</p>
+		</perch:error>
+
+		<div>
+			<perch:label for="email">Email</perch:label>
+			<perch:input type="email" id="email" required="true" label="Email" />
+			<perch:error for="email" type="required">Required</perch:error>
+			<perch:error for="email" type="format">Check format of address</perch:error>
+		</div>
+		<div>
+			<perch:label for="password">Password</perch:label>
+			<perch:input type="password" id="password" required="true" label="Password" />
+			<perch:error for="password" type="required">Required</perch:error>
+		</div>
+		<div>
+			<perch:input type="submit" id="submit" value="Log in" class="button" />
+			<perch:input type="hidden" id="r" />
+
+			<p><small>Forgotten your password? <a href="/members/reset/">Reset it now</a>.</small></p>
+		</div>
+
+    </fieldset>
+
+</perch:form>

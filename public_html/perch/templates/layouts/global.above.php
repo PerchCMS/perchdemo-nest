@@ -20,6 +20,9 @@
 
 	PerchSystem::set_vars($meta);
 
+	$body_class = '';
+	$parts = explode('/', $Perch->get_page());
+	if (isset($parts[1]) && $parts[1]!='index.php') $body_class = $parts[1];
 
 ?><!DOCTYPE html>
 <html lang="en">
@@ -38,14 +41,17 @@
 	?>
 	
 </head>
-<body>
+<body class="<?php echo PerchUtil::html($body_class, true); ?>">
 	<div class="navbar topbar">
 		<nav>
 			<a href="/" class="home icon"><span class="lang-home">Home</span></a>
-			<ul class="fin">
-				<li><a class="members" href="/members/">Member login</a></li>
-			</ul>
 			<?php
+				perch_pages_navigation(array(
+					'levels'   => '1',
+					'navgroup' => 'members',
+					'template' => 'members-item.html',
+					));
+
 				perch_pages_navigation(array(
 					'levels'=>'1',
 					));
