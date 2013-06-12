@@ -1,0 +1,18 @@
+<perch:before>
+    <h2 class="comments icon">Comments</h2>
+	<ul class="comments listing">
+</perch:before>
+		<li id="comment<perch:blog id="commentID" type="hidden" />">		
+			<div class="comment <perch:blog id="perch_item_odd" />">
+				<p rel="bookmark" class="date"></p>
+				<perch:blog id="commentHTML" encode="false" html="true" type="textarea" label="Message (HTML)" order="4" required="true" />
+			</div>
+			
+			<div class="commenter">
+				<img src="//www.gravatar.com/avatar/<perch:blog id="commentEmail" type="email" label="Email" order="2" hash="md5" required="true" />?s=80&amp;d=mm" width="40" height="40" class="photo" />
+				<strong title="<perch:blog id="commentDateTime" format="%d %b %Y %X" type="date" time="true" label="Date" />"><perch:blog id="commentName" type="text" label="Name" order="1" required="true" /></strong>
+			</div>
+		</li>
+<perch:after>
+	</ul>
+</perch:after>

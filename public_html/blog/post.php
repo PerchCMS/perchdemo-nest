@@ -15,6 +15,9 @@
 			'value'    => perch_get('s'),
 		));	
 
+		perch_blog_post_comments(perch_get('s'));
+		perch_blog_post_comment_form(perch_get('s'));
+
 	}
 
 
