@@ -5,7 +5,6 @@
 			'title' => perch_page_title(true),
 		));
 
-
 	perch_content('About us');	
 	
 	perch_layout('global.sidebar', array(
