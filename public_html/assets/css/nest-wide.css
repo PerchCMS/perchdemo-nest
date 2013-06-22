@@ -1,0 +1,15 @@
+
+.navbar {
+	clear: both;
+}
+
+.primary {
+	width: 66.583333%;
+	float: left;
+	clear: left;
+}
+
+.sidebar {
+	width: 33.333333%;
+	float: right;
+}

@@ -2,7 +2,7 @@
 	<h1><perch:content id="heading" type="text" label="Heading" required="true" /></h1>
 
 	<perch:if exists="image">
-		<perch:content id="image" type="image" label="Image" width="280" output="tag" class="embedded" />
+		<perch:content id="image" type="image" label="Image" width="280" output="tag" alt="{heading}" class="embedded" />
 	</perch:if>
 
 	<perch:content id="body" type="textarea" editor="markitup" textile="true" label="Text" />

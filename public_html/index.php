@@ -4,11 +4,9 @@
 	perch_layout('global.above', array(
 			'title'    => perch_page_title(true),
 			'carousel' => true,
+			'banner'   => perch_content('Banner', true),
 		));
-
-	perch_content_custom('Banner', array(
-		));
-
+	
 	$featured_album = perch_gallery_album_listing(array(
 			'count'         => 1,
 			'filter'        => 'featured',

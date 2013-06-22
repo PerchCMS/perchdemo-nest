@@ -31,6 +31,7 @@
 	<title><?php perch_layout_var('title') ?> - <?php echo $meta['site_name']; ?> </title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="/assets/css/nest.css" />
+	<link rel="stylesheet" media="only screen and (min-width: 960px)" href="/assets/css/nest-wide.css" />
 	<?php
 		if (perch_layout_var('carousel', true)) {
 			echo '	<link href="/assets/css/responsive-carousel.css" rel="stylesheet" />
@@ -63,3 +64,11 @@
 	</div>
 
 	<div class="wrapper">
+		<?php
+			if (perch_layout_var('banner', true)) {
+				echo perch_layout_var('banner', true);
+			}
+		?>
+
+
+		<div class="primary">
