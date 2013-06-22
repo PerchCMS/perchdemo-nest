@@ -383,6 +383,10 @@ p {
 	list-style: none;
 }
 
+.posts ol li {
+	list-style: decimal;
+}
+
 .posts .post {
 	padding-left : 80px;
 	padding-right: 20px;

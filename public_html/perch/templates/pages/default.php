@@ -1,19 +1,20 @@
-<?php include($_SERVER['DOCUMENT_ROOT'].'/perch/runtime.php'); ?>
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-	<title><?php perch_pages_title(); ?></title>
-	<?php perch_get_css(); ?>
-</head>
-<body>
-    <h1><?php perch_content('Main heading'); ?></h1>
+<?php
+	include($_SERVER['DOCUMENT_ROOT'].'/perch/runtime.php');
 
-    <?php perch_pages_navigation(); ?>
+	perch_layout('global.above', array(
+			'title' => perch_page_title(true),
+		));
 
-    <?php perch_content('Intro'); ?>
-    
+	perch_content_create('Main content', array(
+		'template' => 'text_block.html',
+		));
 
-    <?php perch_get_javascript(); ?>
-</body>
-</html>
+	perch_content('Main content');	
+	
+	perch_layout('global.sidebar', array(
+			'events'  	=> true,
+			'members' 	=> true,
+		));
+
+	perch_layout('global.below');
+?>

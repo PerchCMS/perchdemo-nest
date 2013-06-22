@@ -3,6 +3,7 @@
 
 	perch_layout('global.above', array(
 			'title' => perch_page_title(true),
+			'carousel' => true,
 		));
 
 
@@ -11,8 +12,6 @@
 		perch_gallery_album(perch_get('album'), array(
 			'template'   => 'album_images.html',
 		));
-
-
 
 	}else{
 
@@ -37,12 +36,13 @@
 
 	}
 
-	
-
 	perch_layout('global.sidebar', array(
 			'events'  	=> true,
 			'members' 	=> true,
 		));
 
-	perch_layout('global.below');
+
+	perch_layout('global.below', array(
+		'carousel' => true,
+		));
 ?>

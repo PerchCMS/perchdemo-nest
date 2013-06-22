@@ -7,7 +7,7 @@
 		if (perch_layout_var('events', true)) {
 			perch_events_custom(array(
 				'template'=>'events/sidebar.html',
-				'count'=>3,
+				'count'=>2,
 			));
 		}
 
