@@ -7,5 +7,3 @@ public_html/perch/addons/plugins
 public_html/perch/runtime.php
 public_html/perch/index.php
 default_content
-members_files/*
-!members_files/README.md
