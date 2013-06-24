@@ -7,6 +7,8 @@ The main purpose of this particular site is to demostrate several of the free Pe
 
 It's also a good demonstration of the use of layouts for largely HTML-free pages.
 
+The Nest Running Club site was designed for Perch by Paddy Donnelly @ Lefft.com 
+
 Setup 
 -----
 
