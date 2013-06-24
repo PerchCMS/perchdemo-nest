@@ -4,6 +4,6 @@
     include(PERCH_PATH.'/addons/apps/perch_blog/runtime.php');
     include(PERCH_PATH.'/addons/apps/perch_gallery/runtime.php');
     include(PERCH_PATH.'/addons/apps/perch_forms/runtime.php');
-    include(PERCH_PATH.'/addons/apps/perch_shop/runtime.php');
+    include(PERCH_PATH.'/addons/apps/perch_shop_paypal/runtime.php');
     include(PERCH_PATH.'/addons/apps/perch_members/runtime.php');
 ?>
