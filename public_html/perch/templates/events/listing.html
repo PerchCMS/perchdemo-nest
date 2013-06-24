@@ -1,6 +1,6 @@
 <div class="box events event">
 	<time datetime="<perch:events id="eventDateTime" format="Y-m-d" />" pubdate="pubdate" class="icon"><span class="day"><perch:events id="eventDateTime" format="d" /></span> <perch:events id="eventDateTime" format="F" /></time>
-	<h2><a href="/events/?event=<perch:events id="eventSlug" />" class="post-title"><perch:events id="eventTitle" /></a></h2>
+	<h2><a href="/events/<perch:events id="eventSlug" />/" class="post-title"><perch:events id="eventTitle" /></a></h2>
 	<perch:events id="summary" type="textarea" />
-	<p><a href="/events/?event=<perch:events id="eventSlug" />" class="read-more">Read More &raquo;</a></p>
+	<p><a href="/events/<perch:events id="eventSlug" />/" class="read-more">Read More &raquo;</a></p>
 </div>

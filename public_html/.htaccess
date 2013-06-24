@@ -1,11 +1,14 @@
 Options +FollowSymLinks
 RewriteEngine On
 
-#blog posts
-#RewriteRule ^blog/archive/cat:([a-zA-Z0-9-]+)$ /blog/archive.php?cat=$1 [L]
-#RewriteRule ^blog/archive/year:([a-zA-Z0-9-]+)$ /blog/archive.php?year=$1 [L]
-#RewriteRule ^blog/archive/year:([a-zA-Z0-9-]+)/month:([a-zA-Z0-9-]+)$ /blog/archive.php?year=$1&month=$2 [L]
+# blog posts
+RewriteRule ^blog/rss/$ /blog/rss/index.php [L]
 RewriteRule ^blog/([a-zA-Z0-9-]+)/$ /blog/post.php?s=$1 [L]
+
+# events
+RewriteRule ^events/rss/$ /events/rss/index.php [L]
+RewriteRule ^events/([a-zA-Z0-9-]+)/$ /events/index.php?event=$1 [L]
+
 
 RewriteRule ^members/file/(.*)$ /members/download.php?f=$1 [L]
 

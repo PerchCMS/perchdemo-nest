@@ -2,8 +2,8 @@
 	include('../perch/runtime.php');
 
 	perch_layout('global.above', array(
-			'title' => perch_blog_post_field(perch_get('s'), 'postTitle', true) . ' - ' . perch_page_title(true),
-			'rss'	=> '/blog/rss/',
+			'title'           => perch_blog_post_field(perch_get('s'), 'postTitle', true) . ' - ' . perch_page_title(true),
+			'rss'             => '/blog/rss/',
 		));
 
 

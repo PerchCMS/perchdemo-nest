@@ -13,3 +13,15 @@
 	width: 33.333333%;
 	float: right;
 }
+
+.product, 
+.album {
+	float: left;
+	margin-right: 3.125%;
+	width: 46.875%;
+}
+
+.album.featured {
+	width: auto;
+	float: none;
+}

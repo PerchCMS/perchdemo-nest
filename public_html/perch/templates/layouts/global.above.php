@@ -72,3 +72,8 @@
 
 
 		<div class="primary">
+			<?php
+				if (perch_layout_var('section_heading', true)) {
+					echo '<div class="gfxheading '.perch_layout_var('section_heading', true).'"></div>';
+				}
+			?>

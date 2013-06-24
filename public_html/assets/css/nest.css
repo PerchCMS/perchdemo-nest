@@ -301,6 +301,37 @@ p {
 	float: right;
 }
 
+/* Graphical section heads */
+
+.gfxheading {
+	width: 100%;
+	height: 80px;
+	background-image: url(/assets/img/headings.png);
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+}
+
+.gfxheading.events {
+	background-position: 50% -240px;
+}
+
+.gfxheading.gallery {
+	background-position: 50% -160px;
+}
+
+.gfxheading.blog {
+	background-position: 50% 0;
+}
+
+.gfxheading.contact {
+	background-position: 50% -80px;
+}
+
+.gfxheading.shop {
+	background-position: 50% -320px;
+}
+
 /* Boxes */
 
 .box {
@@ -508,6 +539,10 @@ h2.comments {
 .comments {
 	list-style: none;
 	margin    : 0 20px 0 0;
+}
+
+.post .comments {
+	margin-right: 0;
 }
 
 .comment {
