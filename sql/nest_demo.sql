@@ -923,7 +923,7 @@ LOCK TABLES `perch2_members` WRITE;
 
 INSERT INTO `perch2_members` (`memberID`, `memberAuthType`, `memberAuthID`, `memberEmail`, `memberPassword`, `memberStatus`, `memberCreated`, `memberExpires`, `memberProperties`)
 VALUES
-	(3,'native','3','drew.mclellan@gmail.com','$P$BDaR2b5PhqBBjj57Myak4ac4aL13x8.','active','2013-06-10 17:28:09',NULL,'{\"first_name\":\"Fred\",\"last_name\":\"Flintstone\",\"membership_no\":\"123454798\"}');
+	(3,'native','3','flintstone@example.com','$P$BDaR2b5PhqBBjj57Myak4ac4aL13x8.','active','2013-06-10 17:28:09',NULL,'{\"first_name\":\"Fred\",\"last_name\":\"Flintstone\",\"membership_no\":\"123454798\"}');
 
 /*!40000 ALTER TABLE `perch2_members` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -947,7 +947,7 @@ LOCK TABLES `perch2_members_forms` WRITE;
 
 INSERT INTO `perch2_members_forms` (`formID`, `formKey`, `formTitle`, `formSettings`)
 VALUES
-	(1,'register.default','Registration form','{\"moderate\":\"1\",\"moderator_email\":\"drew.mclellan@gmail.com\",\"default_tags\":\"member\"}');
+	(1,'register.default','Registration form','{\"moderate\":\"1\",\"moderator_email\":\"{email}\",\"default_tags\":\"member\"}');
 
 /*!40000 ALTER TABLE `perch2_members_forms` ENABLE KEYS */;
 UNLOCK TABLES;
