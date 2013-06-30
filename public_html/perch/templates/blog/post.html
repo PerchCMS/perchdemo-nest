@@ -3,7 +3,7 @@
 	    <div class="post prime">
 	        <time datetime="<perch:blog id="postDateTime" format="Y-m-d" />" pubdate="pubdate"><span class="day"><perch:blog id="postDateTime" format="d" /></span> <perch:blog id="postDateTime" format="F" /></time>
 	        <h2><a href="<perch:blog id="postURL" />" rel="bookmark" class="post-title"><perch:blog id="postTitle" type="text" required="true" size="xl" /></a></h2>
-	        <perch:if exists="image"><img src="<perch:blog id="image" type="image" width="500" />" width="100%" alt="<perch:blog id="postTitle" escape="true" />" /></perch:if>
+	        <perch:if exists="image"><img src="<perch:blog id="image" type="image" width="500" />" alt="<perch:blog id="postTitle" escape="true" />" /></perch:if>
 
 	        <perch:blog id="postDescHTML" type="textarea" encode="false" editor="markitup" textile="true" size="xxl" required="true" />
 	    </div>

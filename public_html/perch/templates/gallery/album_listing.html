@@ -1,9 +1,9 @@
 <div class="album boxer<perch:if exists="featured"> featured</perch:if>">
 	<a href="/gallery/?album=<perch:gallery id="albumSlug" />">
 		<perch:if exists="featured">
-			<img src="<perch:gallery id="feature" />" width="100%" />
+			<img src="<perch:gallery id="feature" />" alt="" />
 		<perch:else />
-			<img src="<perch:gallery id="square" />" width="100%" />
+			<img src="<perch:gallery id="square" />" alt="" />
 		</perch:if>
 		<span class="image-count"><perch:gallery id="imageCount" /> <span class="lang-photos">photos in this album</span></span>
 	</a>

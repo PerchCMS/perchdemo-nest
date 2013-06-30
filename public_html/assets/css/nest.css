@@ -404,7 +404,7 @@ p {
 
 .boxer img {
 	display  : block;
-	max-width: 100%;
+	width    : 100%;
 }
 
 
@@ -520,6 +520,7 @@ p {
 	float      : right;
 	border     : 2px solid rgb(54, 54, 54);
 	margin-left: 10px;
+	width      : 100%;
 }
 
 .posts .prime img {
@@ -891,6 +892,23 @@ input.button {
 	list-style: none;
 }
 
+.album-images:after {
+	content   : ".";
+	display   : block;
+	height    : 0;
+	clear     : both;
+	visibility: hidden;
+}
+
+.album-images li {
+	max-width: 150px;
+	float    : left;
+}
+
+.album-images .boxer img {
+	width    : auto;
+	max-width: 100%;
+}
 
 /* Events */
 
@@ -1016,7 +1034,6 @@ input.button {
 }
 
 .banner img {
-	display   : block;
 	width     : 100%;	
 	max-height: 300px;
 	min-height: 260px;
