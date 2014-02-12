@@ -29,6 +29,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title><?php perch_layout_var('title') ?> - <?php echo $meta['site_name']; ?> </title>
+	<?php perch_page_attributes(); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" href="/assets/css/nest.css" />
 	<link rel="stylesheet" media="only screen and (min-width: 960px)" href="/assets/css/nest-wide.css" />
