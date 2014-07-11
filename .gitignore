@@ -6,7 +6,5 @@ public_html/perch/addons/feathers
 public_html/perch/addons/fieldtypes
 public_html/perch/addons/lang
 public_html/perch/addons/plugins
-public_html/perch/runtime.php
-public_html/perch/index.php
 default_content
 public_html/perch/resources/perch_blog*
