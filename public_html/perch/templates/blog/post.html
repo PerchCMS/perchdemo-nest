@@ -3,7 +3,7 @@
 	    <div class="post prime">
 	        <time datetime="<perch:blog id="postDateTime" format="Y-m-d" type="date" label="Date" />" pubdate="pubdate"><span class="day"><perch:blog id="postDateTime" format="d" type="date" /></span> <perch:blog id="postDateTime" format="F" type="date" /></time>
 	        <h2><a href="<perch:blog id="postURL" type="hidden" />" rel="bookmark" class="post-title"><perch:blog id="postTitle" type="text" required="true" size="xl" label="Title" order="1" /></a></h2>
-	        <perch:if exists="image"><img src="<perch:blog id="image" type="image" width="500" label="Image" order="4" />" alt="<perch:blog id="postTitle" escape="true" type="text" label="Title" />" /></perch:if>
+	        <perch:if exists="image"><img src="<perch:blog id="image" type="image" width="500" label="Image" order="6" />" alt="<perch:blog id="postTitle" escape="true" type="text" label="Title" />" /></perch:if>
 
 	        <perch:blog id="postDescHTML" type="textarea" encode="false" editor="markitup" textile="true" size="xxl" required="true" label="Post" order="2" />
 	    </div>
@@ -12,4 +12,10 @@
 
 <perch:blog id="excerpt" type="textarea" label="Excerpt" textile="true" order="3" suppress="true" size="s autowidth" />
 <perch:blog id="image" type="image" width="140" height="140" crop="true" suppress="true" density="2" />
+
+<perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes" suppress="true" order="5">
+    <a href="archive.php?cat=<perch:category id="catSlug" type="slug" />" class="p-category">
+    <perch:category id="catTitle" type="text" />
+    </a>
+</perch:categories>
 
