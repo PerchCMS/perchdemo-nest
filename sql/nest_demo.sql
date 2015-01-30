@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.38, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.41, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: db_demo_nest
 -- ------------------------------------------------------
--- Server version	5.5.38-0+wheezy1
+-- Server version	5.5.41-0+wheezy1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -292,7 +292,7 @@ CREATE TABLE `perch2_categories` (
   `catTitle` char(64) NOT NULL DEFAULT '',
   `catSlug` char(64) NOT NULL DEFAULT '',
   `catPath` char(255) NOT NULL DEFAULT '',
-  `catDisplayPath` char(255) NOT NULL,
+  `catDisplayPath` char(255) NOT NULL DEFAULT '',
   `catOrder` int(10) unsigned NOT NULL DEFAULT '0',
   `catTreePosition` char(255) NOT NULL DEFAULT '000',
   `catDynamicFields` text NOT NULL,
@@ -984,6 +984,9 @@ CREATE TABLE `perch2_pages` (
   `pageAttributes` text NOT NULL,
   `pageAttributeTemplate` varchar(255) NOT NULL DEFAULT 'default.html',
   `pageTemplate` char(255) NOT NULL DEFAULT '',
+  `templateID` int(10) unsigned NOT NULL DEFAULT '0',
+  `pageSubpageTemplates` varchar(255) NOT NULL DEFAULT '',
+  `pageCollections` varchar(255) NOT NULL DEFAULT '',
   PRIMARY KEY (`pageID`),
   KEY `idx_parent` (`pageParentID`)
 ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
@@ -995,7 +998,7 @@ CREATE TABLE `perch2_pages` (
 
 LOCK TABLES `perch2_pages` WRITE;
 /*!40000 ALTER TABLE `perch2_pages` DISABLE KEYS */;
-INSERT INTO `perch2_pages` VALUES (1,0,'/index.php','Welcome','Home page',0,1,1,'','000-001','','/',1,0,'',0,'2014-01-01 00:00:00','','default.html',''),(2,0,'/about/index.php','About','About',0,2,1,'/about','000-002','','/about',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(3,0,'/events/index.php','Events','Events',0,3,1,'/events','000-003','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(4,0,'/gallery/index.php','Gallery','Gallery',0,4,1,'/gallery','000-004','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(5,0,'/blog/index.php','Blog','Blog',0,5,1,'/blog','000-005','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(6,0,'/shop/index.php','Shop','Shop',0,7,1,'/shop','000-007','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(7,0,'/contact/index.php','Contact','Contact',0,6,1,'/contact','000-006','','',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(10,0,'/members/index.php','Members','Member Login',0,8,1,'/members','000-009','','/members',1,0,'',0,'2014-01-01 00:00:00','','default.html',''),(11,0,'/logout','Log out','Log out',0,9,1,'/log-out','000-010','','/',1,0,'member',0,'2014-01-01 00:00:00','','default.html',''),(12,10,'/members/register/index.php','Register','Register',0,1,2,'/register','000-009-001','','/',0,0,'',0,'2014-01-01 00:00:00','','default.html',''),(15,5,'/blog/post.php','Post','Post',0,1,2,'/blog/post','000-005-001','','/blog',1,0,'',0,'2014-01-01 00:00:00','','default.html',''),(14,10,'/members/reset/index.php','Reset','Reset',0,3,2,'/members/reset','000-009-004','','/members/reset',0,0,'',0,'2014-01-01 00:00:00','','default.html','');
+INSERT INTO `perch2_pages` VALUES (1,0,'/index.php','Welcome','Home page',0,1,1,'','000-001','','/',1,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(2,0,'/about/index.php','About','About',0,2,1,'/about','000-002','','/about',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(3,0,'/events/index.php','Events','Events',0,3,1,'/events','000-003','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(4,0,'/gallery/index.php','Gallery','Gallery',0,4,1,'/gallery','000-004','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(5,0,'/blog/index.php','Blog','Blog',0,5,1,'/blog','000-005','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(6,0,'/shop/index.php','Shop','Shop',0,7,1,'/shop','000-007','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(7,0,'/contact/index.php','Contact','Contact',0,6,1,'/contact','000-006','','',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(10,0,'/members/index.php','Members','Member Login',0,8,1,'/members','000-009','','/members',1,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(11,0,'/logout','Log out','Log out',0,9,1,'/log-out','000-010','','/',1,0,'member',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(12,10,'/members/register/index.php','Register','Register',0,1,2,'/register','000-009-001','','/',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(15,5,'/blog/post.php','Post','Post',0,1,2,'/blog/post','000-005-001','','/blog',1,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'',''),(14,10,'/members/reset/index.php','Reset','Reset',0,3,2,'/members/reset','000-009-004','','/members/reset',0,0,'',0,'2014-01-01 00:00:00','','default.html','',0,'','');
 /*!40000 ALTER TABLE `perch2_pages` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1146,7 +1149,7 @@ CREATE TABLE `perch2_settings` (
 
 LOCK TABLES `perch2_settings` WRITE;
 /*!40000 ALTER TABLE `perch2_settings` DISABLE KEYS */;
-INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#272727'),('content_singlePageEdit',0,'1'),('helpURL',0,'http://docs.grabaperch.com/demo/nest'),('siteURL',0,'/'),('hideBranding',0,'1'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.4',0,'done'),('latest_version',0,'2.5.3'),('perch_blog_post_url',0,'/blog/{postSlug}/'),('perch_blog_update',0,'5.0'),('update_2.2.6',0,'done'),('perch_gallery_update',0,'2.7'),('headerScheme',0,'dark'),('perch_blog_slug_format',0,'{postID}-{postTitle}'),('perch_blog_akismet_key',0,''),('perch_events_detail_url',0,'/events/event.php?event={eventSlug}'),('perch_gallery_bucket_mode',0,'single'),('perch_gallery_bucket',0,'gallery'),('dashboard',0,'1'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('perch_gallery_basicUpload',0,'0'),('perch_members_login_page',0,'/members/login.php?r={returnURL}'),('perch_shop_paypal_email',0,''),('perch_shop_product_url',0,'/shop/product.php?s={productSlug}'),('perch_shop_display_oos',0,'0'),('update_2.2.9',0,'done'),('dashboard_order',1,'perch_blog,perch_gallery,content,perch_forms,perch_events'),('update_2.3.1',0,'done'),('perch_events_update',0,'1.8'),('on_sale_version',0,'2.6.4'),('update_2.4.4',0,'done'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done');
+INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#272727'),('content_singlePageEdit',0,'1'),('helpURL',0,'http://docs.grabaperch.com/demo/nest'),('siteURL',0,'/'),('hideBranding',0,'1'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.4',0,'done'),('latest_version',0,'2.5.3'),('perch_blog_post_url',0,'/blog/{postSlug}/'),('perch_blog_update',0,'5.0'),('update_2.2.6',0,'done'),('perch_gallery_update',0,'2.7'),('headerScheme',0,'dark'),('perch_blog_slug_format',0,'{postID}-{postTitle}'),('perch_blog_akismet_key',0,''),('perch_events_detail_url',0,'/events/event.php?event={eventSlug}'),('perch_gallery_bucket_mode',0,'single'),('perch_gallery_bucket',0,'gallery'),('dashboard',0,'1'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('perch_gallery_basicUpload',0,'0'),('perch_members_login_page',0,'/members/login.php?r={returnURL}'),('perch_shop_paypal_email',0,''),('perch_shop_product_url',0,'/shop/product.php?s={productSlug}'),('perch_shop_display_oos',0,'0'),('update_2.2.9',0,'done'),('dashboard_order',1,'perch_blog,perch_gallery,content,perch_forms,perch_events'),('update_2.3.1',0,'done'),('perch_events_update',0,'1.8'),('on_sale_version',0,'2.7.10'),('update_2.4.4',0,'done'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done');
 /*!40000 ALTER TABLE `perch2_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1437,7 +1440,7 @@ CREATE TABLE `perch2_users` (
 
 LOCK TABLES `perch2_users` WRITE;
 /*!40000 ALTER TABLE `perch2_users` DISABLE KEYS */;
-INSERT INTO `perch2_users` VALUES (1,'{username}','{password}','2013-04-30 13:11:53','2014-09-16 13:29:00','2014-09-16 13:57:29','{firstname}','{lastname}','{email}',1,'ab3bfd67b8c35bbae2b7c7c4aa631ced',2,1);
+INSERT INTO `perch2_users` VALUES (1,'{username}','$P$B20jI.PtwnmvUnYE19qC3iedFvrKZt.','2013-04-30 13:11:53','2015-01-30 09:17:59','2015-01-30 09:17:06','{firstname}','{lastname}','{email}',1,'61da7a44872c36e5eef0dfecac057a8b',2,1);
 /*!40000 ALTER TABLE `perch2_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1450,4 +1453,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-16  6:36:45
+-- Dump completed on 2015-01-30  1:23:25
