@@ -1,9 +1,9 @@
-Perch Demo: Nest Running Club
-=============================
+Perch Runway Demo: Nest Running Club
+====================================
 
 This is the Nest running club demo site, one of the options when you sign up for an online demo. 
 
-The main purpose of this particular site is to demostrate several of the free Perch add-ons. It features Blog, Gallery, Forms, Events, PayPal Shop and Members.
+The main purpose of this particular site is to demostrate several of the free Perch add-ons. It features Blog, Gallery, Forms, Events, Shop and Members.
 
 It's also a good demonstration of the use of layouts for largely HTML-free pages.
 
@@ -12,7 +12,7 @@ The Nest Running Club site was designed for Perch by Paddy Donnelly @ Lefft.com
 Setup 
 -----
 
-To get up and running, you'll need to drop your `perch/core` folder into place, and add each of the add-ons to the `perch/addons` folder. Update the `perch/config.php` file with your own details.
+To get up and running, you'll need to drop your Runway `perch/core` folder into place, and add each of the add-ons to the `perch/addons` folder. Update the `perch/config.php` file with your own details.
 
 Database
 --------
