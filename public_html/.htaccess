@@ -1,15 +1,7 @@
-Options +FollowSymLinks
 RewriteEngine On
 
-# blog posts
-RewriteRule ^blog/rss/$ /blog/rss/index.php [L]
-RewriteRule ^blog/([a-zA-Z0-9-]+)/$ /blog/post.php?s=$1 [L]
-
-# events
-RewriteRule ^events/rss/$ /events/rss/index.php [L]
-RewriteRule ^events/([a-zA-Z0-9-]+)/$ /events/index.php?event=$1 [L]
-
-
-RewriteRule ^members/file/(.*)$ /members/download.php?f=$1 [L]
-
-
+# Perch Runway
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/perch 
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* /perch/core/runway/start.php [L]

@@ -21,8 +21,8 @@
 		};
 	?>
 	<script src="/assets/js/nest.js" type="text/javascript"></script>
-	<?php 
-		PerchUtil::output_debug(); 
-	?>
+<?php
+		include(PERCH_SITEPATH.'/assets/img/nest.svg');
+?>
 </body>
 </html>

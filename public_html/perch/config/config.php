@@ -13,7 +13,3 @@
     
     define('PERCH_HTML5', true);
     define('PERCH_DONT_DELETE_FILES', true);
-
-    
-  
-?>

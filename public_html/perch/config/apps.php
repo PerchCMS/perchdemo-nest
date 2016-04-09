@@ -1,10 +1,11 @@
 <?php
-    include(PERCH_PATH.'/core/apps/content/runtime.php');
-    include(PERCH_PATH.'/core/apps/categories/runtime.php');
-    include(PERCH_PATH.'/addons/apps/perch_events/runtime.php');
-    include(PERCH_PATH.'/addons/apps/perch_blog/runtime.php');
-    include(PERCH_PATH.'/addons/apps/perch_gallery/runtime.php');
-    include(PERCH_PATH.'/addons/apps/perch_forms/runtime.php');
-    include(PERCH_PATH.'/addons/apps/perch_shop_paypal/runtime.php');
-    include(PERCH_PATH.'/addons/apps/perch_members/runtime.php');
-?>
+	$apps_list = [
+		'content', 
+		'categories',
+		'perch_members',
+		'perch_shop',
+		'perch_blog',
+		'perch_forms',
+		'perch_gallery',
+		'perch_events',
+	];

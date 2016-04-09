@@ -1,0 +1,13 @@
+<div class="box shop minor">
+<perch:form id="confirm" app="perch_shop" class="order-confirm">
+	<perch:label for="terms">
+		<perch:input type="checkbox" value="true" id="terms" cart-property="terms_agreed" required="true" />
+		I agree to the terms and conditions.
+	</perch:label>
+	<div>
+		<perch:input type="submit" value="Pay now" class="button" />
+	</div>
+
+	<p><strong>Note:</strong> this demo uses the <i>manual</i> payment gateway (useful for orders by P.O. for example). In most real examples, this next step would take you to a payment gateway pay-page. For the demo you'll go directly to the payment success page.</p>
+</perch:form>
+</div>

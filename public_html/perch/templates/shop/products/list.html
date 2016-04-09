@@ -1,0 +1,22 @@
+<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart">
+    <div class="product boxer">
+        <perch:if exists="image"><img src="<perch:shop id="image" type="image" width="600" height="600" density="1.6" crop="true" />" alt="<perch:shop id="title" />"></perch:if>
+        <div class="box shop minor boxed">
+            <h2><perch:shop id="title" /></h2>
+            <perch:shop id="description" type="textarea" />
+            <perch:if exists="has_variants">     
+                <perch:input id="product" type="select" class="variants" options="<perch:shop id="_variant_opts" type="hidden" />" placeholder="Please choose" required="true" />
+            <perch:else />
+                <perch:input id="product" type="hidden" value="<perch:shop id="productID" type="hidden" />" />
+            </perch:if>
+            <div class="buy">
+                <span class="price">
+                    <perch:shop id="current_price" type="shop_currency_value" />
+                </span>
+                <button class="button">Buy</button>
+                <perch:input type="cms" />
+            </div>
+        </div>
+    </div>
+</perch:form>
+

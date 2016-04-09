@@ -1,0 +1,24 @@
+<perch:if exists="shippings_list">
+	<div class="box events minor">
+		<perch:form id="shipping_method" method="post" app="perch_shop">
+			<h2>Shipping method</h2>
+
+			<perch:error for="all" type="login">
+				<p class="error">Sorry, there was a problem.</p>
+			</perch:error>
+
+			<div>
+				<perch:label for="shipping">Method</perch:label>
+				<perch:input type="select" options="<perch:shop id="shippings_list" />" id="shipping" required="true" placeholder="Please choose"  />
+				<perch:error for="shipping" type="required">Required</perch:error>
+			</div>
+
+
+			<div>
+				<button class="button" type="submit">Set shipping method</button>
+				<perch:input type="cms" />
+				<perch:input type="hidden" id="r" />
+			</div>
+		</perch:form>
+	</div>
+</perch:if>

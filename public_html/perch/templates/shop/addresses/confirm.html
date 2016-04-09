@@ -1,0 +1,34 @@
+<div class="box shop minor">
+<div class="boxed">
+	<div class="col-a">
+		<h2>Billing address</h2>
+		
+		<perch:shop id="addressFirstName" /> <perch:shop id="addressLastName" /><br />
+		<perch:if exists="addressCompany"><perch:shop id="addressCompany" /><br /></perch:if>
+
+		<perch:if exists="address_1"><perch:shop id="address_1" /><br /></perch:if>
+		<perch:if exists="address_2"><perch:shop id="address_2" /><br /></perch:if>
+		<perch:if exists="city"><perch:shop id="city" /> <br /></perch:if>
+		<perch:if exists="county"><perch:shop id="county" /> <br /></perch:if>
+		<perch:if exists="postcode"><perch:shop id="postcode" /> <br /></perch:if>
+		<perch:if exists="country_name"><perch:shop id="country_name" /></perch:if>
+
+	</div>
+
+	<perch:if exists="shipping_address_1">
+	<div class="col-b">
+		<h2>Shipping address</h2>
+		
+		<perch:shop id="shipping_addressFirstName" /> <perch:shop id="shipping_addressLastName" /><br />
+		<perch:if exists="shipping_addressCompany"><perch:shop id="shipping_addressCompany" /><br /></perch:if>
+
+		<perch:if exists="shipping_address_1"><perch:shop id="shipping_address_1" /><br /></perch:if>
+		<perch:if exists="shipping_address_2"><perch:shop id="shipping_address_2" /><br /></perch:if>
+		<perch:if exists="shipping_city"><perch:shop id="shipping_city" /> <br /></perch:if>
+		<perch:if exists="shipping_county"><perch:shop id="shipping_county" /> <br /></perch:if>
+		<perch:if exists="shipping_postcode"><perch:shop id="shipping_postcode" /> <br /></perch:if>
+		<perch:if exists="shipping_country_name"><perch:shop id="shipping_country_name" /></perch:if>
+	</div>
+	</perch:if>
+</div>
+</div>

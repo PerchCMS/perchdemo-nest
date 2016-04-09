@@ -1,0 +1,13 @@
+<div class="box minor shop">
+<perch:form id="currency" method="post" app="perch_shop">
+	<h2>Currency</h2>
+	<div>
+		<perch:label for="currency">Currency</perch:label>
+		<perch:input type="select" options="<perch:shop id="currency_list" />" id="currency" required="true"  />
+		<perch:error for="currency" type="required">Required</perch:error>
+		<button type="submit" class="button">Set currency</button>
+		<perch:input type="cms" />
+		<perch:input type="hidden" id="r" />
+	</div>
+</perch:form>
+</div>

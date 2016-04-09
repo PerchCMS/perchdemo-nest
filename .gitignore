@@ -1,6 +1,6 @@
 .DS_Store
-
 config.private.php
+public_html/perch/core/*
 public_html/perch/addons/apps
 public_html/perch/addons/feathers
 public_html/perch/addons/fieldtypes

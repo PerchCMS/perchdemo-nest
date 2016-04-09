@@ -1,0 +1,149 @@
+<perch:if id="product_count" match="gt" value="0">
+
+<div class="box shop shoppingcart">
+	<perch:form id="cart" app="perch_shop" class="cart">
+		<perch:input type="submit" value="Update" hidden="true" aria-hidden="true" />
+		
+		<table class="cart">
+			<tr>
+				<th></th>
+				<th>Quantity</th>
+				<th class="money">Price</th>
+				<th class="money">Total</th>
+			</tr>
+			<perch:cartitems>
+				<tr>
+					<td>
+						<div class="media">
+							<div class="img">
+								<perch:cartitem id="image" type="image" width="80" height="80" density="1.6" crop="true" output="tag" />
+							</div>
+
+							<div class="bd">
+								<h3><perch:cartitem id="title" /> <i><perch:cartitem id="variant_desc" /></i></h3>
+								<div class="desc">
+									<perch:cartitem id="description" type="textarea" markdown="true" />
+									<button type="submit" class="remove_cart" name="del:<perch:cartitem id="identifier" />" value="1">
+										Remove
+									</button>
+								</div>
+								
+							</div>
+						</div>
+					</td>
+					<td>
+						<perch:input id="qty:<perch:cartitem id="identifier" />" value="<perch:cartitem id="quantity" />" type="number" min="0" />
+					</td>
+					<td class="money">
+						<perch:cartitem id="price_without_tax" />
+					</td>
+					<td class="money">
+						<perch:cartitem id="total_without_tax_formatted" />
+					</td>
+				</tr>
+			</perch:cartitems>
+
+			<perch:if id="total_discounts" match="gt" value="0.00">
+				<tr class="total">
+					<th colspan="3">
+						Discount (<perch:shop id="discount_code" />)
+					</th>
+					<td class="money">
+						<perch:shop id="total_discounts" />
+					</td>
+				</tr>
+			</perch:if>
+			
+
+
+			<perch:if id="total_discounts" match="gt" value="0.00">
+				<tr class="total">
+					<th colspan="3">
+						Sub total
+					</th>
+					<td class="money">
+						<perch:shop id="total_items_discounted" />
+					</td>
+				</tr>
+			<perch:else />
+				<tr class="total">
+					<th colspan="3">
+						Sub total
+					</th>
+					<td class="money">
+						<perch:shop id="total_items" />
+					</td>
+				</tr>
+			</perch:if>
+			<perch:if id="shipping_weight" match="gt" value="0.00">
+				<tr class="total">
+					<th colspan="3">
+						<perch:shop id="shipping_method" />
+						<perch:if id="shipping_without_tax" match="gt" value="0.00">
+							<small class="note">Price subject to delivery location, set on the next step</small>
+						</perch:if>
+					</th>
+					<td class="money">
+						<perch:if id="shipping_without_tax" value="0.00">
+							FREE
+						<perch:else />
+							<perch:shop id="shipping_without_tax" />
+						</perch:if>						
+					</td>
+				</tr>
+
+				<perch:if id="total_shipping_discount" match="gt" value="0.00">
+					<tr>
+						<th colspan="3">
+							Shipping discount <perch:if exists="discount_code">(<perch:shop id="discount_code" />)</perch:if>
+						</th>
+						<td class="money">
+							-<perch:shop id="total_shipping_discount" />
+						</td>
+					</tr>
+					<tr>
+						<th colspan="3">
+							Total
+						</td>
+						<th class="money">
+							<perch:shop id="total_items" />
+						</td>
+					</tr>
+				</perch:if>
+			</perch:if>
+
+			<tr class="total">
+				<th colspan="3">
+					Tax
+				</th>
+				<td class="money">
+					<perch:shop id="total_tax" />
+				</td>
+			</tr>
+			<tr class="total">
+				<th colspan="3">
+					Grand total
+				</th>
+				<td class="money">
+					<perch:shop id="grand_total_formatted" />
+				</td>
+			</tr>
+		</table>
+
+		<div class="buttons">
+			<a href="/shop/checkout" class="checkout button">Checkout now</a>
+			<button type="submit" class="update button knockback">Update cart</button>
+			<perch:input type="cms" />
+			
+		</div>
+
+	</perch:form>
+
+	
+</div>
+<perch:else />
+	<perch:shop id="empty_cart_message" encode="false" />
+</perch:if>
+
+
+

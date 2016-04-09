@@ -1,0 +1,14 @@
+<div class="box members minor">
+	<perch:form id="discount_code" app="perch_shop">
+		<h2><perch:content id="title" type="smarttext" required="true" label="Title" title="true" /></h2>
+		<perch:content id="desc" type="textarea" markdown="true" editor="markitup" label="Description" size="s" />
+		<div>
+			<perch:label for="name"><perch:content id="label" type="text" required="true" label="Field label" /></perch:label>
+			<perch:input type="text" id="discount_code" required="true" />
+		</div>
+		<div>
+			<button type="submit" class="button"><perch:content id="cta" type="smarttext" required="true" label="Call to action" /></button>
+			<perch:input type="cms" />
+		</div>
+	</perch:form>
+</div>

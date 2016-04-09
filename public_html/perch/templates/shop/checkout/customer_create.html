@@ -1,0 +1,135 @@
+<div class="box">
+<perch:form id="register" method="post" app="perch_shop" type="shop" data-address-duplicate="true">
+
+	<fieldset>
+	   	<legend>About you</legend>
+	   	<div class="cols">
+			<div class="col-a">
+				<perch:label for="first_name">First name</perch:label>
+				<perch:input type="text" id="first_name" required="true" label="First name" />
+				<perch:error for="first_name" type="required">Please add your name</perch:error>
+			</div>
+
+			<div class="col-b">
+				<perch:label for="last_name">Last name</perch:label>
+				<perch:input type="text" id="last_name" required="true" label="Last name" />
+				<perch:error for="last_name" type="required">Please add your name</perch:error>
+			</div>
+		</div>
+
+		<div class="col-a">
+			<perch:label for="email">Email</perch:label>
+			<perch:input type="email" id="email" required="true" placeholder="you@company.com" helper="PerchMembers_Members::check_email" />
+			<perch:error for="email" type="required">Please add your email address</perch:error>
+			<perch:error for="email" type="helper">That email address is already in use</perch:error>
+		</div>
+		<perch:input type="hidden" id="password" value="__auto__" />
+
+	   	<div class="col-b">
+			<perch:label for="company">Company</perch:label>
+			<perch:input type="text" id="company" label="Company" />
+		</div>
+
+		<div class="col-a">
+			<perch:label for="address_1">Address 1</perch:label>
+			<perch:input type="text" id="address_1" required="true" label="Address 1" />
+			<perch:error for="address_1" type="required">Please add the first line of your address</perch:error>
+		</div>
+
+		<div class="col-b">
+			<perch:label for="address_2">Address 2</perch:label>
+			<perch:input type="text" id="address_2" label="Address 2" />
+		</div>
+
+
+		<div class="col-a">
+			<perch:label for="city">City</perch:label>
+			<perch:input type="text" id="city" label="City" />
+		</div>
+
+		<div class="col-b">
+			<perch:label for="county">State or County</perch:label>
+			<perch:input type="text" id="county" label="County" />
+		</div>
+
+		<div class="col-a">
+			<perch:label for="postcode">Postal code</perch:label>
+			<perch:input type="text" id="postcode" label="Postal code" />
+		</div>
+
+		<div  class="col-b">
+			<perch:label for="country">Country</perch:label>
+			<perch:input type="select" options="<perch:shop id="country_list" />" value="236" id="country" label="Country" />
+		</div>
+
+	</fieldset>
+
+<perch:if id="shipping_weight" match="gt" value="0.00">
+	<fieldset>
+	   	<legend>Shipping address</legend>
+
+	   	<div class="col-a">
+			<perch:label for="shipping_first_name">First name</perch:label>
+			<perch:input type="text" id="shipping_first_name" required="true" label="First name" />
+			<perch:error for="shipping_first_name" type="required">Please add your name</perch:error>
+		</div>
+
+		<div  class="col-b">
+			<perch:label for="shipping_last_name">Last name</perch:label>
+			<perch:input type="text" id="shipping_last_name" required="true" label="Last name" />
+			<perch:error for="shipping_last_name" type="required">Please add your name</perch:error>
+		</div>
+
+	   	<div>
+			<perch:label for="company">Company</perch:label>
+			<perch:input type="text" id="shipping_company" label="Company" />
+		</div>
+
+		<div class="col-a">
+			<perch:label for="shipping_address_1">Address 1</perch:label>
+			<perch:input type="text" id="shipping_address_1" required="true" label="Address 1" />
+			<perch:error for="shipping_address_1" type="required">Please add the first line of your address</perch:error>
+		</div>
+
+		<div class="col-b">
+			<perch:label for="shipping_address_2">Address 2</perch:label>
+			<perch:input type="text" id="shipping_address_2" label="Address 2" />
+		</div>
+
+
+
+		<div class="col-a">
+			<perch:label for="shipping_city">City</perch:label>
+			<perch:input type="text" id="shipping_city" label="City" />
+		</div>
+
+		<div class="col-b">
+			<perch:label for="shipping_county">State or County</perch:label>
+			<perch:input type="text" id="shipping_county" label="County" />
+		</div>
+
+
+		<div class="col-a">
+			<perch:label for="shipping_postcode">Postal code</perch:label>
+			<perch:input type="text" id="shipping_postcode" label="Postal code" />
+		</div>
+
+		<div class="col-b">
+			<perch:label for="shipping_country">Country</perch:label>
+			<perch:input type="select" options="<perch:shop id="country_list" />" value="236" id="shipping_country" label="Country" />
+		</div>
+
+	</fieldset>
+</perch:if>
+
+		<div>
+			<perch:input type="submit" value="Continue" class="button" />
+		</div>
+	
+
+	<perch:success>
+		<p>Thanks!</p>
+	</perch:success>
+
+</perch:form>
+</div>

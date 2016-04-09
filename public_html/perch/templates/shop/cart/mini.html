@@ -1,0 +1,109 @@
+<perch:if id="product_count" match="gt" value="0">
+
+<div class="box shop minor">
+	<h2>Your cart</h2>
+		<table class="cart minicart">
+			<perch:cartitems>
+				<tr>
+					<td>
+						<h3><perch:cartitem id="quantity" /> × <perch:cartitem id="title" /> <i><perch:cartitem id="variant_desc" /></i></h3>
+					</td>
+					<td class="money">
+						<perch:cartitem id="total_without_tax_formatted" />
+					</td>
+				</tr>
+			</perch:cartitems>
+
+			<perch:if id="total_discounts" match="gt" value="0.00">
+				<tr class="total">
+					<th>
+						Discount (<perch:shop id="discount_code" />)
+					</th>
+					<td class="money">
+						<perch:shop id="total_discounts" />
+					</td>
+				</tr>
+			</perch:if>
+			
+
+
+			<perch:if id="total_discounts" match="gt" value="0.00">
+				<tr class="total">
+					<th>
+						Sub total
+					</th>
+					<td class="money">
+						<perch:shop id="total_items_discounted" />
+					</td>
+				</tr>
+			<perch:else />
+				<tr class="total">
+					<th>
+						Sub total
+					</th>
+					<td class="money">
+						<perch:shop id="total_items" />
+					</td>
+				</tr>
+			</perch:if>
+			<perch:if id="shipping_weight" match="gt" value="0.00">
+				<tr class="total">
+					<th>
+						<perch:shop id="shipping_method" />
+					</th>
+					<td class="money">
+						<perch:if id="shipping_without_tax" value="0.00">
+							FREE
+						<perch:else />
+							<perch:shop id="shipping_without_tax" />
+						</perch:if>
+
+						
+					</td>
+				</tr>
+
+				<perch:if id="total_shipping_discount" match="gt" value="0.00">
+					<tr>
+						<th>
+							Shipping discount <perch:if exists="discount_code">(<perch:shop id="discount_code" />)</perch:if>
+						</th>
+						<td class="money">
+							-<perch:shop id="total_shipping_discount" />
+						</td>
+					</tr>
+					<tr>
+						<th>
+							Total
+						</td>
+						<th class="money">
+							<perch:shop id="total_items" />
+						</td>
+					</tr>
+				</perch:if>
+			</perch:if>
+
+			<tr class="total">
+				<th>
+					Tax
+				</th>
+				<td class="money">
+					<perch:shop id="total_tax" />
+				</td>
+			</tr>
+			<tr class="total">
+				<th>
+					Grand total
+				</th>
+				<td class="money">
+					<perch:shop id="grand_total_formatted" />
+				</td>
+			</tr>
+		</table>
+	
+</div>
+<perch:else />
+	<perch:shop id="empty_cart_message" encode="false" />
+</perch:if>
+
+
+

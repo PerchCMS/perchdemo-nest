@@ -60,7 +60,8 @@ h1 {
 	font-weight: 300;
 }
 
-h2 {
+h2,
+legend {
 	font-weight: 300;
 	margin     : 1em 0 0.5em 0;
 	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
@@ -72,7 +73,8 @@ p {
 	margin-bottom: 1em;
 }
 
-.minor h2 {
+.minor h2,
+legend {
 	text-transform: uppercase;
 	font-family   : "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 	font-size     : 87.5%;
@@ -113,7 +115,8 @@ p {
 
 .minor.shop h2,
 .minor.shop h2 a:link,
-.minor.shop h2 a:visited {
+.minor.shop h2 a:visited,
+.shop legend {
 	color : rgb(204, 97, 135);
 	border: 0;
 }
@@ -185,6 +188,16 @@ p {
 	height: 40px;
 	margin: 0 0 0 10px;
 }
+
+
+.topbar .home .nest-logo {
+	fill: #fff;
+	width: 39px;
+	height: 40px;
+	margin-top: -8px;
+	margin-left: -6px;
+}
+
 
 .topbar .lang-home {
 	position: absolute;
@@ -303,34 +316,55 @@ p {
 
 /* Graphical section heads */
 
-.gfxheading {
+.logo-header {
+	font-family: "cubano";	
 	width: 100%;
 	height: 80px;
-	background-image: url(/assets/img/headings.png);
-	background-position: 50% 0;
-	background-repeat: no-repeat;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
+	font-size: 170%;
+	text-align: center;
+	padding-top: 15px;
 }
 
-.gfxheading.events {
-	background-position: 50% -240px;
+.logo-header .nest-logo {
+	height: 75px;
+	width: 75px;
+	display: inline;
+	vertical-align: middle;
+	margin-top: -15px;
 }
 
-.gfxheading.gallery {
-	background-position: 50% -160px;
+.logo-header span {
+	margin-left: -8px;
+	display: inline;
+	vertical-align: middle;
 }
 
-.gfxheading.blog {
-	background-position: 50% 0;
+.logo-header.events {
+	color: rgb(87, 149, 178);
+	fill: rgb(87, 149, 178);
 }
 
-.gfxheading.contact {
-	background-position: 50% -80px;
+.logo-header.gallery {
+	color: rgb(98, 119, 227);
+	fill: rgb(98, 119, 227);
 }
 
-.gfxheading.shop {
-	background-position: 50% -320px;
+.logo-header.blog {
+	color: rgb(240, 88, 78);
+	fill: rgb(240, 88, 78);
 }
+
+.logo-header.contact {
+	color: rgb(240, 158, 78);
+	fill: rgb(240, 158, 78);
+}
+
+.logo-header.shop {
+	color: rgb(204, 97, 135);
+	fill: rgb(204, 97, 135);
+}
+
 
 /* Boxes */
 
@@ -372,11 +406,6 @@ p {
 	border-top-color: rgb(240, 88, 78);
 }
 
-.events .box,
-.box.events {
-	border-top-color: rgb(87, 149, 178);
-}
-
 .gallery .box,
 .box.gallery {
 	border-top-color: rgb(98, 119, 227);
@@ -393,13 +422,20 @@ p {
 }
 
 .members .box,
-.box.members {
+.box.members,
+.sidebar .box.members {
 	border-top-color: rgb(174, 190, 98);
 }
 
 .about .box,
 .box.about {
 	border-top-color: rgb(98, 190, 141);
+}
+
+.events .box,
+.box.events,
+.sidebar .box.events {
+	border-top-color: rgb(87, 149, 178);
 }
 
 .boxer img {
@@ -604,6 +640,11 @@ h2.comments {
 }
 
 
+/* About */
+
+.about h1 {
+	margin-bottom: 0.4em;
+}
 
 /* Forms */
 
@@ -611,7 +652,8 @@ form {
 
 }
 
-input {
+input,
+select {
 	font-size         : 100%;
 	width             : 320px;
 	max-width         : 100%;
@@ -629,7 +671,9 @@ input[type=text],
 input[type=email],
 input[type=password],
 input[type=url],
-textarea {
+input[type=number],
+textarea, 
+select {
 	background-color: rgb(239, 239, 239);
 	border          : 0;
 	box-shadow      : inset 0px 2px 6px rgb(217, 217, 217);
@@ -766,10 +810,6 @@ input.button {
 	background-color: rgb(240, 88, 78);
 }
 
-.events .button {
-	background-color: rgb(87, 149, 178);
-}
-
 .gallery .button {
 	background-color: rgb(98, 119, 227);
 }
@@ -782,13 +822,24 @@ input.button {
 	background-color: rgb(204, 97, 135);
 }
 
-.members .button {
+.members .button,
+.sidebar .members .button {
 	background-color: rgb(174, 190, 98);
 }
 
 .about .button {
 	background-color: rgb(98, 190, 141);
 }
+
+.events .button,
+.sidebar .events .button {
+	background-color: rgb(87, 149, 178);
+}
+
+.button.knockback {
+	background-color: rgb(160, 160, 160);
+}
+
 
 .button:hover,
 .button:focus,
@@ -843,9 +894,9 @@ input.button {
 	padding: 0.4em 1.5em;
 }
 
-
-.product .buy .button:hover:before {
-	content: "Demo only - ";
+.product .variants {
+	max-width: 50%;
+	margin: 0;
 }
 
 /* Gallery */
@@ -1033,6 +1084,28 @@ input.button {
 	max-height: 300px;
 }
 
+.banner h1 {
+	position: absolute;
+	top: 20px;
+	font-size: 100%;
+	color: #fff;
+	font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	text-transform: uppercase;
+	text-align: center;
+	left: 0;
+	right: 0;
+	letter-spacing: 0.05em;
+}
+
+.banner .nest-logo {
+	fill: #fff;
+	display: inline-block;
+	height: 130px;
+}
+
+.banner div {
+}
+
 .banner img {
 	width     : 100%;	
 	max-height: 300px;
@@ -1051,19 +1124,22 @@ input.button {
 }
 
 .banner .strap {
-	background-image   : url(/assets/img/strapline.png);
+	/*background-image   : url(/assets/img/strapline.png);
 	background-position: 50% 0;
 	background-repeat  : no-repeat;
-	background-size    : 100%;
+	background-size    : 100%;*/
 	width              : 90%;
-	max-width          : 523px;
-	height             : 50px;
-	max-height         : 50px;
 	position           : absolute;
 	left               : 0;
 	right              : 0;
 	top                : 200px;
 	margin             : 0 auto;
+	font-family: "cubano";
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+	font-size: 2.5em;
+	text-align: center;
 }
 
 
@@ -1088,3 +1164,176 @@ input.button {
 }
 
 
+/* Cart */
+
+.box.shoppingcart {
+	padding-top: 0;
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.cart input[type=number] {
+	width: 3em;
+	display: block;
+}
+
+
+.cart tr {
+	border-top: 2px solid rgb(239, 239, 239);
+}
+
+.cart tr:first-child {
+	border-top: 0;
+}
+
+.cart th {
+	text-align: left;
+}
+
+.cart .money,
+.cart .total th {
+	text-align: right;
+}
+
+.cart th,
+.cart td {
+	padding: 20px 20px 20px 20px;
+}
+
+.cart h3 i {
+	font-weight: normal;
+	font-size: 87.5%;
+}
+
+.cart .buttons {
+	margin-top: 20px;
+	padding: 0 20px;
+}
+
+.cart .checkout.button {
+	float: right;
+	padding: 11px 2em 12px 2em;
+}
+
+.cart .remove_cart {
+	background: none;
+	border: 0;
+	font-size: 87.5%;
+	cursor: pointer;
+	color : rgb(204, 97, 135);
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+.cart .remove_cart:hover {
+	border-bottom: 1px solid rgb(0, 0, 0);
+	color: rgb(0, 0, 0);
+}
+
+.cart .desc p {
+	margin-bottom: 0;
+	font-size: 87.5%;
+}
+
+.cart .note {
+	display: block;
+	font-weight: normal;
+}
+
+.minicart {
+	font-size: 87.5%;
+	width: 100%;
+}
+
+.minicart th,
+.minicart td {
+	padding: 10px;
+}
+
+.cart.static {
+	width: 100%;
+}
+
+.order-confirm label,
+.order-confirm input {
+	width: auto;
+	margin: 5px 0;
+}
+
+.shop dt {
+	font-weight: bold;
+	float: left;
+	clear: left;
+	width: 20%;
+}
+
+.downloads ul {
+	list-style: none;
+}
+
+
+.downloads small {
+	font-size: 50%;
+	color: #aaa;
+}
+
+.downloads li {
+	background: url(/assets/img/cloud_download.svg);
+	background-repeat: no-repeat;
+	background-size: 21px;
+	background-position: left 3px;
+	padding-left: 25px;
+}
+
+.download {
+	font-size: 87.5%;
+}
+
+a.download:link,
+a.download:visited {
+	color: rgb(174, 190, 98);
+	border-color: rgb(174, 190, 98);
+}
+
+/* ====== media ====== */
+.media {
+	/*margin: 0 10px 10px 0;*/
+}
+
+.media, 
+.bd {
+	overflow: hidden;
+}
+
+.media .img {
+	float: left; 
+	margin-right: 20px;
+}
+
+.media .img img {
+	display:block;
+}
+
+.media .imgExt {
+	float: right; 
+	margin-left: 20px;
+}
+
+/* columns */
+
+.cols {
+	clear: left;
+	margin: 0 -20px;
+	padding: 0 20px;
+}
+
+.col-a {
+	width: 50%;
+	float: left;
+}
+
+.col-b {
+	width: 50%;
+	float: right;
+}

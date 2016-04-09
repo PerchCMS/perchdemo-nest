@@ -1,0 +1,38 @@
+<perch:shop id="sku" type="text" label="SKU" required="true" order="1" />
+<perch:shop id="title" type="text" label="Title" required="true" order="2" />
+<perch:shop id="slug" type="slug" editable="true" indelible="true" label="Slug" for="title sku" order="10" divider-before="Meta data" />
+<perch:shop id="description" type="textarea" label="Description" editor="markitup" order="3" markdown="true" size="s" />
+<perch:shop id="image" type="image" label="Main product image" order="4" width="800" />
+<perch:shop id="image" type="image" width="80" height="80" density="1.6" crop="true" />
+<perch:shop id="image" type="image" width="600" height="600" density="1.6" crop="true" />
+<perch:shop id="status" type="shop_status" label="Status" />
+
+<perch:shop id="brand" type="shop_brand" label="Brand" allowempty="true" />
+
+<perch:categories id="category" set="products" label="Category">
+	<perch:category id="catTitle" />
+</perch:categories>
+
+<perch:shop id="catalog_only" type="shop_catalog_only" label="Catalog only" />
+<perch:shop id="price" type="shop_currency_value" label="Price" divider-before="Pricing" size="m" min="0" step="any" />
+<perch:shop id="sale_price" type="shop_currency_value" label="Sale price" size="m" min="0" step="any" />
+<perch:shop id="trade_price" type="shop_currency_value" label="Trade price" size="m" min="0" step="any" runway="true" />
+<perch:shop id="on_sale" type="checkbox" value="1" label="Use sale price" />
+<perch:shop id="tax_group" type="shop_tax_group" label="Tax group" required="true" />
+
+
+<perch:shop id="stock_status" type="shop_stock_status" label="Stock status" divider-before="Stock" required="true" />
+<perch:shop id="stock_level" type="number" label="Stock level" size="s" />
+<perch:shop id="stock_location" type="shop_stock_location" label="Count stock" />
+<perch:shop id="max_in_cart" type="number" label="Max quantity in cart" size="s" />
+
+<perch:shop id="requires_shipping" type="shop_requires_shipping" label="Requires shipping" divider-before="Shipping" />
+<perch:shop id="weight" type="number" label="Shipping weight" size="s" />
+<perch:shop id="width" type="number" label="Width" size="s" />
+<perch:shop id="height" type="number" label="Height" size="s" />
+<perch:shop id="depth" type="number" label="Depth" size="s" />
+
+<perch:form id="add_to_cart" app="perch_shop" action="/shop/cart">
+	<perch:input id="product" type="hidden" env-autofill="false" value="<perch:shop id="productID" type="hidden" env-autofill="false" />" />
+	<perch:input type="submit" value="Add to cart" />
+</perch:form>

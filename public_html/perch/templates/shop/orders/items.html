@@ -1,0 +1,43 @@
+<div class="box">
+<perch:before>
+<dl>
+    <dt>Invoice Number</dt>
+    <dd><perch:shop id="invoice_number" /></dd>
+
+    <dt>Date</dt>
+    <dd><perch:shop id="orderCreated" type="date" format="d F Y H:i" /></dd>
+
+    <dt>Total</dt>
+    <dd><perch:shop id="grand_total_formatted" /></dd>
+
+</dl>
+
+<table class="cart static">
+	<tr>
+		<th>Item</th>
+		<th>Quantity</th>
+		<th class="money">Price</th>
+		<th class="money">Total</th>
+	</tr>
+</perch:before>
+    <perch:orderitems>
+    	<tr>
+            <td>
+            	<perch:orderitem id="title" type="hidden" />
+                <perch:orderitem id="variant_desc" type="hidden" />
+            </td>
+            <td>
+                <perch:orderitem id="quantity" type="hidden" />
+            </td>
+            <td class="money">
+            	<perch:orderitem id="price_without_tax_formatted" />
+            </td>
+            <td class="money">
+            	<perch:orderitem id="total_without_tax_formatted" />
+            </td>
+        </tr>
+    </perch:orderitems>
+<perch:after>
+</table>
+</perch:after>
+</div>

@@ -1,0 +1,24 @@
+<perch:before>
+<div class="box minor members downloads">
+	<h2>Your purchased files</h2>
+</perch:before>
+
+
+<perch:if different="productID">
+	<perch:if not-exists="perch_item_first">
+		</ul>
+	</perch:if>
+
+	<h3><perch:shop id="title" type="text" /></h3>
+	<ul>
+</perch:if>
+
+	<li>
+		<a href="/shop/download/<perch:shop id="fileID" />" class="download">Download <perch:shop id="fileTitle" type="text" label="Title" order="1" /></a>
+	</li>
+
+<perch:after>
+	</ul>
+	<small>Cloud Download icon by misirlou from the Noun Project</small>
+</div>
+</perch:after>
