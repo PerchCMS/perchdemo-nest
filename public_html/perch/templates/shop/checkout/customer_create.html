@@ -70,14 +70,14 @@
 
 	   	<div class="col-a">
 			<perch:label for="shipping_first_name">First name</perch:label>
-			<perch:input type="text" id="shipping_first_name" required="true" label="First name" />
-			<perch:error for="shipping_first_name">Please add your name</perch:error>
+			<perch:input type="text" id="shipping_first_name" label="First name" />
+			<perch:error for="shipping_first_name" type="required">Please add your name</perch:error>
 		</div>
 
 		<div  class="col-b">
 			<perch:label for="shipping_last_name">Last name</perch:label>
-			<perch:input type="text" id="shipping_last_name" required="true" label="Last name" />
-			<perch:error for="shipping_last_name">Please add your name</perch:error>
+			<perch:input type="text" id="shipping_last_name" label="Last name" />
+			<perch:error for="shipping_last_name" type="required">Please add your name</perch:error>
 		</div>
 
 	   	<div>
@@ -87,14 +87,16 @@
 
 		<div class="col-a">
 			<perch:label for="shipping_address_1">Address 1</perch:label>
-			<perch:input type="text" id="shipping_address_1" required="true" label="Address 1" />
-			<perch:error for="shipping_address_1">Please add the first line of your address</perch:error>
+			<perch:input type="text" id="shipping_address_1" label="Address 1" />
+			<perch:error for="shipping_address_1" type="required">Please add the first line of your address</perch:error>
 		</div>
 
 		<div class="col-b">
 			<perch:label for="shipping_address_2">Address 2</perch:label>
 			<perch:input type="text" id="shipping_address_2" label="Address 2" />
 		</div>
+
+
 
 		<div class="col-a">
 			<perch:label for="shipping_city">City</perch:label>
