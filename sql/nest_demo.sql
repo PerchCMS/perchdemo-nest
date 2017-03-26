@@ -1520,7 +1520,7 @@ CREATE TABLE `perch2_settings` (
 
 LOCK TABLES `perch2_settings` WRITE;
 /*!40000 ALTER TABLE `perch2_settings` DISABLE KEYS */;
-INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#53355b'),('content_singlePageEdit',0,'1'),('helpURL',0,''),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.4',0,'done'),('latest_version',0,''),('perch_blog_post_url',0,'/blog/{postSlug}/'),('perch_blog_update',0,'5.0.1'),('update_2.2.6',0,'done'),('perch_gallery_update',0,'2.8.5'),('headerScheme',0,'dark'),('perch_blog_slug_format',0,'{postID}-{postTitle}'),('perch_blog_akismet_key',0,''),('perch_events_detail_url',0,'/events/event.php?event={eventSlug}'),('perch_gallery_bucket_mode',0,'single'),('perch_gallery_bucket',0,'gallery'),('dashboard',0,'1'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('perch_gallery_basicUpload',0,'0'),('perch_members_login_page',0,'/members/?r={returnURL}'),('perch_shop_paypal_email',0,''),('perch_shop_product_url',0,'/shop/{productSlug}'),('perch_shop_display_oos',0,'0'),('update_2.2.9',0,'done'),('dashboard_order',1,'perch_blog,perch_gallery,content,perch_forms,perch_events'),('update_2.3.1',0,'done'),('perch_events_update',0,'1.8'),('on_sale_version',0,''),('update_2.4.4',0,'done'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done'),('update_2.8',0,'done'),('update_2.8.2',0,'done'),('update_2.8.8',0,'done'),('update_2.8.15',0,'done'),('update_runway_2.8.27',0,'done'),('perch_shop_update',0,'1.1'),('perch_members_update',0,'1.4'),('perch_blog_site_name',0,''),('perch_blog_max_spam_days',0,'0'),('perch_shop_price_tax_mode',0,'exc'),('perch_shop_trade_price_tax_mode',0,'exc'),('perch_shop_site_url',0,'https://'),('perch_shop_default_currency',0,'47'),('perch_shop_reporting_currency',0,'47'),('perch_shop_invoice_number_format',0,'Nest%d'),('hide_pwd_reset',0,'0'),('content_frontend_edit',0,'0'),('update_runway_2.8.28',0,'done'),('update_runway_2.8.29',0,'done'),('update_runway_3.0b17',0,'done');
+INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#53355b'),('content_singlePageEdit',0,'1'),('helpURL',0,''),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.4',0,'done'),('latest_version',0,''),('perch_blog_post_url',0,'/blog/{postSlug}/'),('perch_blog_update',0,'5.0.1'),('update_2.2.6',0,'done'),('perch_gallery_update',0,'2.8.5'),('headerScheme',0,'dark'),('perch_blog_slug_format',0,'{postID}-{postTitle}'),('perch_blog_akismet_key',0,''),('perch_events_detail_url',0,'/events/event.php?event={eventSlug}'),('perch_gallery_bucket_mode',0,'single'),('perch_gallery_bucket',0,'gallery'),('dashboard',0,'1'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('perch_gallery_basicUpload',0,'0'),('perch_members_login_page',0,'/members/?r={returnURL}'),('perch_shop_paypal_email',0,''),('perch_shop_product_url',0,'/shop/{productSlug}'),('perch_shop_display_oos',0,'0'),('update_2.2.9',0,'done'),('dashboard_order',1,'perch_blog,perch_gallery,content,perch_forms,perch_events'),('update_2.3.1',0,'done'),('perch_events_update',0,'1.8'),('on_sale_version',0,''),('update_2.4.4',0,'done'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done'),('update_2.8',0,'done'),('update_2.8.2',0,'done'),('update_2.8.8',0,'done'),('update_2.8.15',0,'done'),('update_runway_2.8.27',0,'done'),('perch_shop_update',0,'1.1'),('perch_members_update',0,'1.4'),('perch_blog_site_name',0,''),('perch_blog_max_spam_days',0,'0'),('perch_shop_price_tax_mode',0,'exc'),('perch_shop_trade_price_tax_mode',0,'exc'),('perch_shop_site_url',0,'https://'),('perch_shop_default_currency',0,'47'),('perch_shop_reporting_currency',0,'47'),('perch_shop_invoice_number_format',0,'Nest%d'),('hide_pwd_reset',0,'0'),('content_frontend_edit',0,'0'),('update_runway_2.8.28',0,'done'),('update_runway_2.8.29',0,'done'),('update_runway_3.0b17',0,'done'),('update_runway_3.0',0,'done');
 /*!40000 ALTER TABLE `perch2_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1644,7 +1644,7 @@ CREATE TABLE `perch2_shop_cart` (
   `cartProperties` text,
   `cartDiscountCode` char(255) DEFAULT '',
   PRIMARY KEY (`cartID`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1653,7 +1653,7 @@ CREATE TABLE `perch2_shop_cart` (
 
 LOCK TABLES `perch2_shop_cart` WRITE;
 /*!40000 ALTER TABLE `perch2_shop_cart` DISABLE KEYS */;
-INSERT INTO `perch2_shop_cart` VALUES (1,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(2,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(3,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(4,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]','');
+INSERT INTO `perch2_shop_cart` VALUES (1,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(2,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(3,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(4,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(5,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]','');
 /*!40000 ALTER TABLE `perch2_shop_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2730,7 +2730,7 @@ CREATE TABLE `perch2_users` (
 
 LOCK TABLES `perch2_users` WRITE;
 /*!40000 ALTER TABLE `perch2_users` DISABLE KEYS */;
-INSERT INTO `perch2_users` VALUES (1,'{username}','$P$B20jI.PtwnmvUnYE19qC3iedFvrKZt.','2013-04-30 13:11:53','2017-03-22 10:43:06','2017-03-22 10:15:02','{firstname}','{lastname}','{email}',1,'871ff5416635cf5832cc3d23e68744a3',2,1,'expired','2015-01-01 00:00:00',NULL,0);
+INSERT INTO `perch2_users` VALUES (1,'{username}','$P$B20jI.PtwnmvUnYE19qC3iedFvrKZt.','2013-04-30 13:11:53','2017-03-26 15:23:25','2017-03-26 16:23:16','{firstname}','{lastname}','{email}',1,'fa2e0944618d0f72d2acba25606ede96',2,1,'expired','2015-01-01 00:00:00',NULL,0);
 /*!40000 ALTER TABLE `perch2_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2743,4 +2743,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-22  4:20:10
+-- Dump completed on 2017-03-26  8:24:20
