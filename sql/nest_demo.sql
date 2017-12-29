@@ -1,8 +1,8 @@
--- MySQL dump 10.13  Distrib 5.5.54, for debian-linux-gnu (x86_64)
+-- MySQL dump 10.13  Distrib 5.5.58, for debian-linux-gnu (x86_64)
 --
 -- Host: localhost    Database: db_demo_nest
 -- ------------------------------------------------------
--- Server version	5.5.54-0+deb7u2
+-- Server version	5.5.58-0+deb7u1
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -1520,7 +1520,7 @@ CREATE TABLE `perch2_settings` (
 
 LOCK TABLES `perch2_settings` WRITE;
 /*!40000 ALTER TABLE `perch2_settings` DISABLE KEYS */;
-INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#53355b'),('content_singlePageEdit',0,'1'),('helpURL',0,''),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.4',0,'done'),('latest_version',0,''),('perch_blog_post_url',0,'/blog/{postSlug}/'),('perch_blog_update',0,'5.0.1'),('update_2.2.6',0,'done'),('perch_gallery_update',0,'2.8.5'),('headerScheme',0,'dark'),('perch_blog_slug_format',0,'{postID}-{postTitle}'),('perch_blog_akismet_key',0,''),('perch_events_detail_url',0,'/events/event.php?event={eventSlug}'),('perch_gallery_bucket_mode',0,'single'),('perch_gallery_bucket',0,'gallery'),('dashboard',0,'1'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('perch_gallery_basicUpload',0,'0'),('perch_members_login_page',0,'/members/?r={returnURL}'),('perch_shop_paypal_email',0,''),('perch_shop_product_url',0,'/shop/{productSlug}'),('perch_shop_display_oos',0,'0'),('update_2.2.9',0,'done'),('dashboard_order',1,'perch_blog,perch_gallery,content,perch_forms,perch_events'),('update_2.3.1',0,'done'),('perch_events_update',0,'1.8'),('on_sale_version',0,''),('update_2.4.4',0,'done'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done'),('update_2.8',0,'done'),('update_2.8.2',0,'done'),('update_2.8.8',0,'done'),('update_2.8.15',0,'done'),('update_runway_2.8.27',0,'done'),('perch_shop_update',0,'1.1'),('perch_members_update',0,'1.4'),('perch_blog_site_name',0,''),('perch_blog_max_spam_days',0,'0'),('perch_shop_price_tax_mode',0,'exc'),('perch_shop_trade_price_tax_mode',0,'exc'),('perch_shop_site_url',0,'https://'),('perch_shop_default_currency',0,'47'),('perch_shop_reporting_currency',0,'47'),('perch_shop_invoice_number_format',0,'Nest%d'),('hide_pwd_reset',0,'0'),('content_frontend_edit',0,'0'),('update_runway_2.8.28',0,'done'),('update_runway_2.8.29',0,'done'),('update_runway_3.0b17',0,'done'),('update_runway_3.0',0,'done');
+INSERT INTO `perch2_settings` VALUES ('headerColour',0,'#53355b'),('content_singlePageEdit',0,'1'),('helpURL',0,''),('siteURL',0,'/'),('hideBranding',0,'0'),('content_collapseList',0,'1'),('lang',0,'en-gb'),('update_2.2.4',0,'done'),('latest_version',0,''),('perch_blog_post_url',0,'/blog/{postSlug}/'),('perch_blog_update',0,'5.0.1'),('update_2.2.6',0,'done'),('perch_gallery_update',0,'2.8.5'),('headerScheme',0,'dark'),('perch_blog_slug_format',0,'{postID}-{postTitle}'),('perch_blog_akismet_key',0,''),('perch_events_detail_url',0,'/events/event.php?event={eventSlug}'),('perch_gallery_bucket_mode',0,'single'),('perch_gallery_bucket',0,'gallery'),('dashboard',0,'1'),('content_hideNonEditableRegions',0,'0'),('perch_blog_comment_notify',0,'0'),('perch_gallery_basicUpload',0,'0'),('perch_members_login_page',0,'/members/?r={returnURL}'),('perch_shop_paypal_email',0,''),('perch_shop_product_url',0,'/shop/{productSlug}'),('perch_shop_display_oos',0,'0'),('update_2.2.9',0,'done'),('dashboard_order',1,'perch_blog,perch_gallery,content,perch_forms,perch_events'),('update_2.3.1',0,'done'),('perch_events_update',0,'1.8'),('on_sale_version',0,'3.0.12'),('update_2.4.4',0,'done'),('update_2.5.3',0,'done'),('update_2.6.4',0,'done'),('update_2.6.5',0,'done'),('update_2.7.10',0,'done'),('update_2.8',0,'done'),('update_2.8.2',0,'done'),('update_2.8.8',0,'done'),('update_2.8.15',0,'done'),('update_runway_2.8.27',0,'done'),('perch_shop_update',0,'1.1'),('perch_members_update',0,'1.4'),('perch_blog_site_name',0,''),('perch_blog_max_spam_days',0,'0'),('perch_shop_price_tax_mode',0,'exc'),('perch_shop_trade_price_tax_mode',0,'exc'),('perch_shop_site_url',0,'https://'),('perch_shop_default_currency',0,'47'),('perch_shop_reporting_currency',0,'47'),('perch_shop_invoice_number_format',0,'Nest%d'),('hide_pwd_reset',0,'0'),('content_frontend_edit',0,'0'),('update_runway_2.8.28',0,'done'),('update_runway_2.8.29',0,'done'),('update_runway_3.0b17',0,'done'),('update_runway_3.0',0,'done'),('update_runway_3.0.12',0,'done');
 /*!40000 ALTER TABLE `perch2_settings` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1644,7 +1644,7 @@ CREATE TABLE `perch2_shop_cart` (
   `cartProperties` text,
   `cartDiscountCode` char(255) DEFAULT '',
   PRIMARY KEY (`cartID`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1653,7 +1653,7 @@ CREATE TABLE `perch2_shop_cart` (
 
 LOCK TABLES `perch2_shop_cart` WRITE;
 /*!40000 ALTER TABLE `perch2_shop_cart` DISABLE KEYS */;
-INSERT INTO `perch2_shop_cart` VALUES (1,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(2,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(3,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(4,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(5,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]','');
+INSERT INTO `perch2_shop_cart` VALUES (1,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(2,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(3,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(4,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(5,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]',''),(6,NULL,NULL,47,1,NULL,'standard',0,0,0.00,0.00,NULL,NULL,'[]','');
 /*!40000 ALTER TABLE `perch2_shop_cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -2631,7 +2631,7 @@ CREATE TABLE `perch2_user_privileges` (
   `privOrder` int(10) unsigned NOT NULL DEFAULT '99',
   PRIMARY KEY (`privID`),
   UNIQUE KEY `idx_key` (`privKey`)
-) ENGINE=MyISAM AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=89 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -2640,8 +2640,38 @@ CREATE TABLE `perch2_user_privileges` (
 
 LOCK TABLES `perch2_user_privileges` WRITE;
 /*!40000 ALTER TABLE `perch2_user_privileges` DISABLE KEYS */;
-INSERT INTO `perch2_user_privileges` VALUES (1,'perch.login','Log in',1),(2,'perch.settings','Change settings',2),(3,'perch.users.manage','Manage users',3),(4,'perch.updatenotices','View update notices',4),(5,'content.regions.delete','Delete regions',1),(6,'content.regions.options','Edit region options',2),(7,'content.pages.edit','Edit page details',1),(8,'content.pages.reorder','Reorder pages',2),(9,'content.pages.create','Add new pages',3),(10,'content.pages.configure','Configure page settings',5),(11,'content.pages.delete','Delete pages',4),(12,'content.templates.delete','Delete master pages',6),(13,'content.navgroups.configure','Configure navigation groups',7),(14,'content.navgroups.create','Create navigation groups',8),(15,'content.navgroups.delete','Delete navigation groups',9),(16,'perch_events','Access events',1),(17,'perch_events.categories.manage','Manage categories',1),(18,'perch_blog','Access the blog',1),(19,'perch_blog.post.create','Create posts',1),(20,'perch_blog.post.delete','Delete posts',1),(21,'perch_blog.post.publish','Publish posts',1),(22,'perch_blog.comments.moderate','Moderate comments',1),(23,'perch_blog.comments.enable','Enable comments on a post',1),(24,'perch_blog.categories.manage','Manage categories',1),(25,'perch_blog.import','Import data',1),(26,'perch_blog.authors.manage','Manage authors',1),(27,'content.pages.republish','Republish pages',12),(28,'perch_gallery','Access the gallery',1),(29,'perch_gallery.album.create','Create albums',1),(30,'perch_gallery.image.upload','Upload images',1),(31,'perch_forms','Access forms',1),(32,'perch_forms.configure','Configure forms',1),(33,'perch_forms.delete','Delete forms',1),(34,'perch_shop','Access shop',1),(35,'perch_shop.categories.manage','Manage categories',1),(36,'perch_members','Manage members',1),(37,'content.pages.create.toplevel','Add new top-level pages',3),(38,'content.pages.delete.own','Delete pages they created themselves',4),(39,'content.templates.configure','Configure master pages',6),(40,'content.pages.attributes','Edit page titles and attributes',6),(41,'assets.create','Upload assets',1),(42,'perch_blog.sections.manage','Manage sections',1),(43,'categories.create','Create new categories',1),(44,'categories.delete','Delete categories',2),(45,'categories.manage','Manage categories',3),(46,'categories.sets.create','Create category sets',4),(47,'categories.sets.delete','Delete category sets',5),(48,'assets.manage','Manage assets',2),(49,'content.regions.revert','Roll back regions',3),(50,'perch_blog.blogs.manage','Manage blogs',1),(51,'perch_shop.brands.create','Create new brands',1),(52,'perch_shop.brands.edit','Edit brands',1),(53,'perch_shop.brands.delete','Delete brands',1),(54,'perch_shop.currencies.create','Create new currencies',1),(55,'perch_shop.currencies.delete','Delete currencies',1),(56,'perch_shop.currencies.edit','Edit currencies',1),(57,'perch_shop.customers.create','Create new customers',1),(58,'perch_shop.customers.delete','Delete customers',1),(59,'perch_shop.customers.edit','Edit customers',1),(60,'perch_shop.email.create','Create new emails',1),(61,'perch_shop.emails.delete','Delete emails',1),(62,'perch_shop.options.create','Create new product options',1),(63,'perch_shop.options.edit','Edit product options',1),(64,'perch_shop.orders','Access orders',1),(65,'perch_shop.orders.edit','Edit orders',1),(66,'perch_shop.products','Access Products',1),(67,'perch_shop.products.create','Create new products',1),(68,'perch_shop.products.edit','Edit products',1),(69,'perch_shop.products.delete','Delete products',1),(70,'perch_shop.promos.create','Create new promotions',1),(71,'perch_shop.promos.edit','Edit promotions',1),(72,'perch_shop.promos.delete','Delete promotions',1),(73,'perch_shop.shippings.create','Create new shipping methods',1),(74,'perch_shop.shippings.delete','Delete shipping methods',1),(75,'perch_shop.shippings.edit','Edit shipping methods',1),(76,'perch_shop.statuses.create','Create new order statuses',1),(77,'perch_shop.statuses.delete','Delete order statuses',1),(78,'perch_shop.statuses.edit','Edit order statuses',1),(79,'perch_shop.taxbands.create','Create new tax bands',1),(80,'perch_shop.taxbands.delete','Delete tax bands',1),(81,'perch_shop.taxbands.edit','Edit tax bands',1),(82,'perch_shop.taxgroups.create','Create new tax groups',1),(83,'perch_shop.taxgroups.delete','Delete tax groups',1),(84,'perch_shop.taxgroups.edit','Edit tax groups',1),(85,'perch_shop.taxlocations.create','Create new tax locations',1),(86,'perch_shop.taxlocations.delete','Delete tax locations',1),(87,'perch_shop.taxlocations.edit','Edit tax locations',1);
+INSERT INTO `perch2_user_privileges` VALUES (1,'perch.login','Log in',1),(2,'perch.settings','Change settings',2),(3,'perch.users.manage','Manage users',3),(4,'perch.updatenotices','View update notices',4),(5,'content.regions.delete','Delete regions',1),(6,'content.regions.options','Edit region options',2),(7,'content.pages.edit','Edit page details',1),(8,'content.pages.reorder','Reorder pages',2),(9,'content.pages.create','Add new pages',3),(10,'content.pages.configure','Configure page settings',5),(11,'content.pages.delete','Delete pages',4),(12,'content.templates.delete','Delete master pages',6),(13,'content.navgroups.configure','Configure navigation groups',7),(14,'content.navgroups.create','Create navigation groups',8),(15,'content.navgroups.delete','Delete navigation groups',9),(16,'perch_events','Access events',1),(17,'perch_events.categories.manage','Manage categories',1),(18,'perch_blog','Access the blog',1),(19,'perch_blog.post.create','Create posts',1),(20,'perch_blog.post.delete','Delete posts',1),(21,'perch_blog.post.publish','Publish posts',1),(22,'perch_blog.comments.moderate','Moderate comments',1),(23,'perch_blog.comments.enable','Enable comments on a post',1),(24,'perch_blog.categories.manage','Manage categories',1),(25,'perch_blog.import','Import data',1),(26,'perch_blog.authors.manage','Manage authors',1),(27,'content.pages.republish','Republish pages',12),(28,'perch_gallery','Access the gallery',1),(29,'perch_gallery.album.create','Create albums',1),(30,'perch_gallery.image.upload','Upload images',1),(31,'perch_forms','Access forms',1),(32,'perch_forms.configure','Configure forms',1),(33,'perch_forms.delete','Delete forms',1),(34,'perch_shop','Access shop',1),(35,'perch_shop.categories.manage','Manage categories',1),(36,'perch_members','Manage members',1),(37,'content.pages.create.toplevel','Add new top-level pages',3),(38,'content.pages.delete.own','Delete pages they created themselves',4),(39,'content.templates.configure','Configure master pages',6),(40,'content.pages.attributes','Edit page titles and attributes',6),(41,'assets.create','Upload assets',1),(42,'perch_blog.sections.manage','Manage sections',1),(43,'categories.create','Create new categories',1),(44,'categories.delete','Delete categories',2),(45,'categories.manage','Manage categories',3),(46,'categories.sets.create','Create category sets',4),(47,'categories.sets.delete','Delete category sets',5),(48,'assets.manage','Manage assets',2),(49,'content.regions.revert','Roll back regions',3),(50,'perch_blog.blogs.manage','Manage blogs',1),(51,'perch_shop.brands.create','Create new brands',1),(52,'perch_shop.brands.edit','Edit brands',1),(53,'perch_shop.brands.delete','Delete brands',1),(54,'perch_shop.currencies.create','Create new currencies',1),(55,'perch_shop.currencies.delete','Delete currencies',1),(56,'perch_shop.currencies.edit','Edit currencies',1),(57,'perch_shop.customers.create','Create new customers',1),(58,'perch_shop.customers.delete','Delete customers',1),(59,'perch_shop.customers.edit','Edit customers',1),(60,'perch_shop.email.create','Create new emails',1),(61,'perch_shop.emails.delete','Delete emails',1),(62,'perch_shop.options.create','Create new product options',1),(63,'perch_shop.options.edit','Edit product options',1),(64,'perch_shop.orders','Access orders',1),(65,'perch_shop.orders.edit','Edit orders',1),(66,'perch_shop.products','Access Products',1),(67,'perch_shop.products.create','Create new products',1),(68,'perch_shop.products.edit','Edit products',1),(69,'perch_shop.products.delete','Delete products',1),(70,'perch_shop.promos.create','Create new promotions',1),(71,'perch_shop.promos.edit','Edit promotions',1),(72,'perch_shop.promos.delete','Delete promotions',1),(73,'perch_shop.shippings.create','Create new shipping methods',1),(74,'perch_shop.shippings.delete','Delete shipping methods',1),(75,'perch_shop.shippings.edit','Edit shipping methods',1),(76,'perch_shop.statuses.create','Create new order statuses',1),(77,'perch_shop.statuses.delete','Delete order statuses',1),(78,'perch_shop.statuses.edit','Edit order statuses',1),(79,'perch_shop.taxbands.create','Create new tax bands',1),(80,'perch_shop.taxbands.delete','Delete tax bands',1),(81,'perch_shop.taxbands.edit','Edit tax bands',1),(82,'perch_shop.taxgroups.create','Create new tax groups',1),(83,'perch_shop.taxgroups.delete','Delete tax groups',1),(84,'perch_shop.taxgroups.edit','Edit tax groups',1),(85,'perch_shop.taxlocations.create','Create new tax locations',1),(86,'perch_shop.taxlocations.delete','Delete tax locations',1),(87,'perch_shop.taxlocations.edit','Edit tax locations',1),(88,'assets.delete','Delete assets',3);
 /*!40000 ALTER TABLE `perch2_user_privileges` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `perch2_user_role_buckets`
+--
+
+DROP TABLE IF EXISTS `perch2_user_role_buckets`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `perch2_user_role_buckets` (
+  `urbID` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `roleID` int(10) unsigned NOT NULL DEFAULT '0',
+  `bucket` char(64) NOT NULL DEFAULT '',
+  `roleSelect` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `roleInsert` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `roleUpdate` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `roleDelete` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  `roleDefault` tinyint(1) unsigned NOT NULL DEFAULT '1',
+  PRIMARY KEY (`urbID`),
+  KEY `idx_rolebucket` (`roleID`,`bucket`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `perch2_user_role_buckets`
+--
+
+LOCK TABLES `perch2_user_role_buckets` WRITE;
+/*!40000 ALTER TABLE `perch2_user_role_buckets` DISABLE KEYS */;
+/*!40000 ALTER TABLE `perch2_user_role_buckets` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -2730,7 +2760,7 @@ CREATE TABLE `perch2_users` (
 
 LOCK TABLES `perch2_users` WRITE;
 /*!40000 ALTER TABLE `perch2_users` DISABLE KEYS */;
-INSERT INTO `perch2_users` VALUES (1,'{username}','$P$B20jI.PtwnmvUnYE19qC3iedFvrKZt.','2013-04-30 13:11:53','2017-03-26 15:23:25','2017-03-26 16:23:16','{firstname}','{lastname}','{email}',1,'fa2e0944618d0f72d2acba25606ede96',2,1,'expired','2015-01-01 00:00:00',NULL,0);
+INSERT INTO `perch2_users` VALUES (1,'{username}','{password}','2013-04-30 13:11:53','2017-12-29 09:09:09','2017-12-29 09:08:49','{firstname}','{lastname}','{email}',1,'b1c22af48471289fabfb7f95772e15fd',2,1,'expired','2015-01-01 00:00:00',NULL,0);
 /*!40000 ALTER TABLE `perch2_users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -2743,4 +2773,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-26  8:24:20
+-- Dump completed on 2017-12-29  2:02:10
